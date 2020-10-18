@@ -5,11 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
     <title>Portfolio works</title>
 </head>
 
 <body>
-    <h1>Портфолио работ</h1>
+    <section id="header">
+        <div class="container">
+            <div class="glitch-wrapper">
+                <div class="glitch" data-text="Портфолио #$!@">Портфолио</div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="pieces-slider">
+            <!-- Each slide with corresponding image and text -->
+            <div class="pieces-slider__slide">
+                <img class="pieces-slider__image" src="https://tympanus.net/Tutorials/PiecesSlider/img/5.jpg" alt="">
+                <div class="pieces-slider__text">Ricardo Gomez Angel</div>
+            </div>
+            <canvas class="pieces-slider__canvas"></canvas>
+        </div>
+    </section>
 </body>
+
+<script src="main.js"></script>
 
 </html>
