@@ -1,0 +1,16 @@
+<svg id="active_check" data-name="active check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0b7159;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="border" class="cls-1" width="16" height="16" rx="3" ry="3"/>
+  <path id="arrow" class="cls-2" d="M749.128,799.5l0.261-.335a0.375,0.375,0,0,1,.617,0l2.98,3.8,2.983-3.8a0.373,0.373,0,0,1,.617,0l0.261,0.333a0.666,0.666,0,0,1,0,.786l-3.552,4.54a0.409,0.409,0,0,1-.309.178h0a0.413,0.413,0,0,1-.309-0.178l-3.548-4.528a0.647,0.647,0,0,1-.128-0.4A0.64,0.64,0,0,1,749.128,799.5Z" transform="translate(-745 -793)"/>
+</svg>

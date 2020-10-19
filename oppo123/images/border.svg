@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.5" height="15.5" viewBox="0 0 15.5 15.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #131514;
+        stroke-width: 1.5px;
+        opacity: 0.5;
+      }
+    </style>
+  </defs>
+  <rect id="border" class="cls-1" x="0.75" y="0.75" width="14" height="14" rx="3" ry="3"/>
+</svg>

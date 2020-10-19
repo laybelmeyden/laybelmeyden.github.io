@@ -1,0 +1,4539 @@
+
+/* font */
+
+        @font-face {
+            font-family: "OPPOSANS-U";
+            src: url('../fonts/OPPOSANS-ULTRA.eot');
+            src: url('../fonts/OPPOSANS-ULTRA.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/OPPOSANS-ULTRA.otf') format('opentype'),
+            url('../fonts/OPPOSANS-ULTRA.svg'),
+            url('../fonts/OPPOSANS-ULTRA.woff') format('woff'),
+            url('../fonts/OPPOSANS-ULTRA.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: "OPPOSANS-B";
+            src: url('../fonts/OPPOSANS-BOLD.eot');
+            src: url('../fonts/OPPOSANS-BOLD.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/OPPOSANS-BOLD.otf') format('opentype'),
+            url('../fonts/OPPOSANS-BOLD.svg'),
+            url('../fonts/OPPOSANS-BOLD.woff') format('woff'),
+            url('../fonts/OPPOSANS-BOLD.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: "OPPOSANS-M";
+            src: url('../fonts/OPPOSANS-MEDIUM.eot');
+            src: url('../fonts/OPPOSANS-MEDIUM.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/OPPOSANS-MEDIUM.otf') format('opentype'),
+            url('../fonts/OPPOSANS-MEDIUM.svg'),
+            url('../fonts/OPPOSANS-MEDIUM.woff') format('woff'),
+            url('../fonts/OPPOSANS-MEDIUM.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: "OPPOSANS-R";
+            src: url('../fonts/OPPOSANS-REGULAR.eot');
+            src: url('../fonts/OPPOSANS-REGULAR.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/OPPOSANS-REGULAR.otf') format('opentype'),
+            url('../fonts/OPPOSANS-REGULAR.svg'),
+            url('../fonts/OPPOSANS-REGULAR.woff') format('woff'),
+            url('../fonts/OPPOSANS-REGULAR.ttf') format('truetype');
+        }
+
+/* body */
+		
+		html, body {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-size:16px;
+            text-indent:0;
+            text-align:justify;
+            line-height:24px;
+            width:100%;
+            min-width:1180px;
+            height:100%;
+            margin:0 auto;
+            padding:0;
+            color:#131514;
+            background:#ffffff;
+            -webkit-text-size-adjust: none;
+            position:relative;
+		}
+
+            @media all and (max-width: 1200px) {
+                html, body {
+                    min-width:1010px;
+                }
+            }
+
+            @media all and (max-width: 1020px) {
+                html, body {
+                    min-width:710px;
+                }
+            }
+
+            @media all and (max-width: 720px) {
+                html, body {
+                    min-width:400px;
+                }
+            }
+
+        ::-webkit-scrollbar {width:10px; height:10px;}
+        ::-webkit-scrollbar-button {width:0; height:0; background:#ffffff; }
+        ::-webkit-scrollbar-track {background:#ffffff;}
+        ::-webkit-scrollbar-track-piece {background:#ffffff;}
+        ::-webkit-scrollbar-thumb {height:5px; background:#0b7159;}
+        ::-webkit-scrollbar-corner {background:#ffffff;}
+        ::-webkit-resizer {background:#ffffff;}
+
+        ::selection {color:#ffffff; background:#0b7159;}
+        ::-moz-selection {color:#ffffff; background:#0b7159;}
+
+        body img {border:none;}
+
+		a {text-decoration:none;} 
+		
+		a:link {color:#131514;}
+		a:visited {color:#131514;}
+		a:hover {color:#131514;}
+		a:active {color:#131514;}
+
+        a:hover, a:not(:hover) {
+            -webkit-transition: All 0.2s ease;
+            -moz-transition: All 0.2s ease;
+            -o-transition: All 0.2s ease;
+            -ms-transition: All 0.2s ease;
+            transition: All 0.2s ease;
+        }
+
+		.clear {clear:both;}
+
+        ul {
+            margin:0;
+            padding:0;
+        }
+
+        ul li {
+            padding:0;
+            margin:0;
+            list-style-type: none;
+        }
+
+/* page */
+
+        #page {
+            width:100%;
+            overflow:hidden;
+            max-width:1920px;
+            padding:0;
+            margin:0 auto;
+            position: relative;
+            background:#ffffff;
+        }
+
+/* top */
+
+        #top-w {
+            width:100%;
+            max-width:1920px;
+            padding:0;
+            margin:0;
+            position:fixed;
+            top:0;
+            left:auto;
+            z-index:90;
+            background:#ffffff;
+            -moz-box-shadow: 0 15px 30px 0 rgba(28,29,34,0.03);
+            -webkit-box-shadow: 0 15px 30px 0 rgba(28,29,34,0.03);
+            box-shadow: 0 15px 30px 0 rgba(28,29,34,0.03);
+		}
+
+        #top {
+            width:1140px;
+            padding:15px 0 15px 0;
+            margin:0 auto;
+            position:relative;
+            text-align:center;
+            z-index:5;
+		}
+
+        #top a.logo {
+            width:125px;
+            height:40px;
+            padding:0;
+            margin:0;
+            background:url('../images/logo.png') no-repeat center center;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+            cursor:pointer;
+            display:block;
+            float:left;
+		}
+
+        #top a.tel {
+            font-family: "OPPOSANS-U";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:18px;
+            line-height:36px;
+            padding:0 0 0 50px;
+            margin:0;
+            color:#0b7159;
+            cursor:pointer;
+            float:right;
+            position:relative;
+        }
+
+        #top a.tel::after {
+            content:'';
+            width:40px;
+            height:40px;
+            padding:0;
+            margin:0;
+            background:url('../images/tel.svg') no-repeat center center #0b7159;
+            cursor:pointer;
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:auto;
+            border-radius:100%;
+            -webkit-border-radius:100%;
+            -moz-border-radius:100%;
+            -khtml-border-radius:100%;
+        }
+
+            @media all and (max-width: 1200px) {
+                #top {
+                    width:960px;
+                    padding:15px 0 15px 0;
+                    margin:0 auto;
+                    position:relative;
+                    text-align:center;
+                    z-index:5;
+                }
+            }
+
+            @media all and (max-width: 1020px) {
+                #top {
+                    width:660px;
+                    padding:15px 0 15px 0;
+                    margin:0 auto;
+                    position:relative;
+                    text-align:center;
+                    z-index:5;
+                }
+            }
+
+            @media all and (max-width: 720px) {
+                #top {
+                    width:360px;
+                    padding:10px 0 10px 0;
+                    margin:0 auto;
+                    position:relative;
+                    text-align:center;
+                    z-index:5;
+                }
+            }
+
+/* parall */
+
+        #parall-1 {
+            width:599px;
+            height:2000px;
+            padding:0;
+            margin:0;
+            background:url('../images/parall-1.png') no-repeat top center;
+            position:absolute;
+            top:430px;
+            left:calc(50% - 1170px);
+            z-index:3;
+        }
+
+        #parall-2 {
+            width:560px;
+            height:2000px;
+            padding:0;
+            margin:0;
+            background:url('../images/parall-2.png') no-repeat top center;
+            position:absolute;
+            top:-430px;
+            right:calc(50% - 980px);
+            z-index:3;
+        }
+
+            @media all and (max-width: 1700px) {
+
+                #parall-1 {
+                    width:599px;
+                    height:2000px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/parall-1.png') no-repeat top center;
+                    position:absolute;
+                    top:520px;
+                    left:calc(50% - 1070px);
+                    z-index:3;
+                }
+
+                #parall-2 {
+                    width:560px;
+                    height:2000px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/parall-2.png') no-repeat top center;
+                    position:absolute;
+                    top:-430px;
+                    right:calc(50% - 880px);
+                    z-index:3;
+                }
+            }
+
+            @media all and (max-width: 1200px) {
+
+                #parall-1 {
+                    width:449px;
+                    height:2000px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/parall-1.png') no-repeat top center;
+                    -webkit-background-size: 100% auto;
+                    -moz-background-size: 100% auto;
+                    -o-background-size: 100% auto;
+                    background-size: 100% auto;
+                    position:absolute;
+                    top:620px;
+                    left:calc(50% - 820px);
+                    z-index:3;
+                }
+
+                #parall-2 {
+                    width:420px;
+                    height:2000px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/parall-2.png') no-repeat top center;
+                    -webkit-background-size: 100% auto;
+                    -moz-background-size: 100% auto;
+                    -o-background-size: 100% auto;
+                    background-size: 100% auto;
+                    position:absolute;
+                    top:-450px;
+                    right:calc(50% + 10px);
+                    z-index:3;
+                }
+            }
+
+            @media all and (max-width: 1020px) {
+
+                #parall-1 {
+                    width:320px;
+                    height:2000px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/parall-1.png') no-repeat top center;
+                    -webkit-background-size: 100% auto;
+                    -moz-background-size: 100% auto;
+                    -o-background-size: 100% auto;
+                    background-size: 100% auto;
+                    position:absolute;
+                    top:1450px;
+                    left:calc(50% - 520px);
+                    z-index:3;
+                }
+
+                #parall-2 {
+                    width:380px;
+                    height:2000px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/parall-2.png') no-repeat top center;
+                    -webkit-background-size: 100% auto;
+                    -moz-background-size: 100% auto;
+                    -o-background-size: 100% auto;
+                    background-size: 100% auto;
+                    position:absolute;
+                    top:-650px;
+                    right:calc(50% - 510px);
+                    z-index:3;
+                }
+            }
+
+            @media all and (max-width: 720px) {
+                #parall-1 {
+                    width:260px;
+                    height:2000px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/parall-1.png') no-repeat top center;
+                    -webkit-background-size: 100% auto;
+                    -moz-background-size: 100% auto;
+                    -o-background-size: 100% auto;
+                    background-size: 100% auto;
+                    position:absolute;
+                    top:1450px;
+                    left:calc(50% - 320px);
+                    z-index:3;
+                }
+
+                #parall-2 {
+                    width:260px;
+                    height:2000px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/parall-2.png') no-repeat top center;
+                    -webkit-background-size: 100% auto;
+                    -moz-background-size: 100% auto;
+                    -o-background-size: 100% auto;
+                    background-size: 100% auto;
+                    position:absolute;
+                    top:-650px;
+                    right:calc(50% - 310px);
+                    z-index:3;
+                }
+            }
+
+/* box-1 */
+
+		#box-1-w {
+            width:100%;
+            padding:0;
+            margin:0;
+            position:relative;
+            background-image: linear-gradient(to right, #d6e2df, #f5f9f8, #d6e2df);
+            background-image: -webkit-linear-gradient(to right, #d6e2df, #f5f9f8, #d6e2df);
+            background-image: -moz-linear-gradient(to right, #d6e2df, #f5f9f8, #d6e2df);
+            background-image: -o-linear-gradient(to right, #d6e2df, #f5f9f8, #d6e2df);
+            background-image: -ms-linear-gradient(to right, #d6e2df, #f5f9f8, #d6e2df);
+		}
+
+        #elements-1 {
+            width:100%;
+            padding:70px 0 0 0;
+            margin:0;
+            position:relative;
+            background:url('../images/e1.png') repeat top center;
+        }
+
+        #box-1 {
+            width:1140px;
+            padding:70px 0 80px 0;
+            margin:0 auto;
+            position:relative;
+            text-align:left;
+            z-index:5;
+		}
+
+        #box-1 h2 {
+            font-family: "OPPOSANS-U";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:34px;
+            line-height:50px;
+            max-width:650px;
+            padding:0;
+            margin:0;
+            color:#131514;
+            cursor:default;
+        }
+
+        #box-1 h1 {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:20px;
+            line-height:30px;
+            padding:0;
+            margin:25px 0 0 0;
+            color:#131514;
+            cursor:default;
+        }
+
+        .sp1-1 {
+            font-family: "OPPOSANS-U";
+            font-weight:normal;
+            color:#0b7159;
+        }
+
+        .sp1-2 {
+            font-family: "OPPOSANS-U";
+            font-weight:normal;
+        }
+
+        #box-1 h3 {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:14px;
+            line-height:24px;
+            padding:0;
+            margin:20px 0 0 0;
+            color:#131514;
+            cursor:default;
+        }
+
+        #box-1 h3 span {
+            font-family: "OPPOSANS-U";
+            font-weight:normal;
+            color:#0b7159;
+        }
+
+        #box-1 a.link-1 {
+            font-family: "OPPOSANS-B";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:11px;
+            line-height:18px;
+            padding:0;
+            margin:0 0 0 0;
+            color:#0b7159;
+            border-bottom:1px solid #0b7159;
+            cursor:pointer;
+            display:inline-block;
+            position:relative;
+            z-index:20;
+        }
+
+        #box-1 a.link-1:hover {
+            border-bottom:1px solid rgba(0,0,0,0);
+        }
+
+        #box-1 p {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:center;
+            font-size:14px;
+            line-height:20px;
+            width:250px;
+            padding:60px 0 20px 0;
+            margin:70px 10px 0 0;
+            color:#131514;
+            cursor:default;
+            background:#ffffff;
+            border-radius:10px;
+            -webkit-border-radius:10px;
+            -moz-border-radius:10px;
+            -khtml-border-radius:10px;
+            position:relative;
+            float:left;
+            -moz-box-shadow: 0 15px 30px 0 rgba(28,29,34,0.1);
+            -webkit-box-shadow: 0 15px 30px 0 rgba(28,29,34,0.1);
+            box-shadow: 0 15px 30px 0 rgba(28,29,34,0.1);
+        }
+
+        #box-1 p span {
+            font-family: "OPPOSANS-U";
+            font-weight:normal;
+        }
+
+        #box-1 p::after {
+            content:'';
+            width:80px;
+            height:80px;
+            padding:0;
+            margin:0;
+            border-radius:100%;
+            -webkit-border-radius:100%;
+            -moz-border-radius:100%;
+            -khtml-border-radius:100%;
+            position:absolute;
+            top:-40px;
+            left:calc(50% - 40px);
+            z-index:auto;
+        }
+
+        #box-1 p.p1-1::after { background:url('../images/ico-1.svg') no-repeat center center #0b7159; }
+        #box-1 p.p1-2::after { background:url('../images/ico-2.svg') no-repeat center center #0b7159; }
+        #box-1 p.p1-3::after { background:url('../images/ico-3.svg') no-repeat center center #0b7159; }
+
+        .button-1 {
+            font-family: "OPPOSANS-B";
+            font-weight:normal;
+            font-style:normal;
+            text-align:center;
+            font-size:14px;
+            line-height:56px;
+            width:240px;
+            height:60px;
+            padding:0;
+            margin:50px 0 0 0;
+            outline:none;
+            cursor:pointer;
+            -webkit-appearance: none;
+            -moz-appearance:none;
+            color:#ffffff;
+            background:#0b7159;
+            border:none;
+            border-radius:30px;
+            -webkit-border-radius:30px;
+            -moz-border-radius:30px;
+            -khtml-border-radius:30px;
+            -moz-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+            -webkit-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+            box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+            float:left;
+            position:relative;
+            z-index:20;
+        }
+
+        .button-1:hover {
+            background:#131514;
+            -moz-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+            -webkit-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+            box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+            outline:none;
+        }
+
+        .button-1:hover, .button-1:not(:hover) {
+            -webkit-transition: All 0.2s ease;
+            -moz-transition: All 0.2s ease;
+            -o-transition: All 0.2s ease;
+            -ms-transition: All 0.2s ease;
+            transition: All 0.2s ease;
+        }
+
+        #box-1 a.link-2 {
+            font-family: "OPPOSANS-B";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:11px;
+            line-height:18px;
+            padding:0;
+            margin:70px 0 0 30px;
+            color:#0b7159;
+            border-bottom:1px solid #0b7159;
+            cursor:pointer;
+            float:left;
+            position:relative;
+            z-index:20;
+        }
+
+        #box-1 a.link-2:hover {
+            border-bottom:1px solid rgba(0,0,0,0);
+        }
+
+        .img1-1 {
+            width:437px;
+            height:389px;
+            padding:0;
+            margin:0;
+            background:url('../images/p1.png') no-repeat top center;
+            position:absolute;
+            top:390px;
+            right:-100px;
+            z-index:10;
+        }
+
+        .img1-2 {
+            width:417px;
+            height:456px;
+            padding:0;
+            margin:0;
+            background:url('../images/p2.png') no-repeat top center;
+            position:absolute;
+            top:180px;
+            right:60px;
+            z-index:9;
+        }
+
+        .img1-3 {
+            width:250px;
+            height:453px;
+            padding:0;
+            margin:0;
+            background:url('../images/p3.png') no-repeat top center;
+            position:absolute;
+            top:50px;
+            right:40px;
+            z-index:8;
+        }
+
+            @media all and (max-width: 1200px) {
+
+                #elements-1 {
+                    width:100%;
+                    padding:70px 0 0 0;
+                    margin:0;
+                    position:relative;
+                    background:url('../images/e1.png') repeat top center;
+                }
+
+                #box-1 {
+                    width:960px;
+                    padding:70px 0 80px 0;
+                    margin:0 auto;
+                    position:relative;
+                    text-align:left;
+                    z-index:5;
+                }
+
+                #box-1 h2 {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:32px;
+                    line-height:50px;
+                    max-width:650px;
+                    padding:0;
+                    margin:0;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                #box-1 h1 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:18px;
+                    line-height:28px;
+                    padding:0;
+                    margin:25px 0 0 0;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                .sp1-1 {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                    color:#0b7159;
+                }
+
+                .sp1-2 {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                }
+
+                #box-1 h3 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:14px;
+                    line-height:24px;
+                    padding:0;
+                    margin:20px 0 0 0;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                #box-1 h3 span {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                    color:#0b7159;
+                }
+
+                #box-1 a.link-1 {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:11px;
+                    line-height:18px;
+                    padding:0;
+                    margin:0 0 0 0;
+                    color:#0b7159;
+                    border-bottom:1px solid #0b7159;
+                    cursor:pointer;
+                    display:inline-block;
+                    position:relative;
+                    z-index:20;
+                }
+
+                #box-1 a.link-1:hover {
+                    border-bottom:1px solid rgba(0,0,0,0);
+                }
+
+                #box-1 p {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:14px;
+                    line-height:20px;
+                    width:240px;
+                    padding:60px 0 20px 0;
+                    margin:70px 10px 0 0;
+                    color:#131514;
+                    cursor:default;
+                    background:#ffffff;
+                    border-radius:10px;
+                    -webkit-border-radius:10px;
+                    -moz-border-radius:10px;
+                    -khtml-border-radius:10px;
+                    position:relative;
+                    float:left;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(28,29,34,0.1);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(28,29,34,0.1);
+                    box-shadow: 0 15px 30px 0 rgba(28,29,34,0.1);
+                }
+
+                #box-1 p span {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                }
+
+                #box-1 p::after {
+                    content:'';
+                    width:80px;
+                    height:80px;
+                    padding:0;
+                    margin:0;
+                    border-radius:100%;
+                    -webkit-border-radius:100%;
+                    -moz-border-radius:100%;
+                    -khtml-border-radius:100%;
+                    position:absolute;
+                    top:-40px;
+                    left:calc(50% - 40px);
+                    z-index:auto;
+                }
+
+                #box-1 p.p1-1::after { background:url('../images/ico-1.svg') no-repeat center center #0b7159; }
+                #box-1 p.p1-2::after { background:url('../images/ico-2.svg') no-repeat center center #0b7159; }
+                #box-1 p.p1-3::after { background:url('../images/ico-3.svg') no-repeat center center #0b7159; }
+
+                .button-1 {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:14px;
+                    line-height:56px;
+                    width:240px;
+                    height:60px;
+                    padding:0;
+                    margin:50px 0 0 0;
+                    outline:none;
+                    cursor:pointer;
+                    -webkit-appearance: none;
+                    -moz-appearance:none;
+                    color:#ffffff;
+                    background:#0b7159;
+                    border:none;
+                    border-radius:30px;
+                    -webkit-border-radius:30px;
+                    -moz-border-radius:30px;
+                    -khtml-border-radius:30px;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    float:left;
+                    position:relative;
+                    z-index:20;
+                }
+
+                .button-1:hover {
+                    background:#131514;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    outline:none;
+                }
+
+                .button-1:hover, .button-1:not(:hover) {
+                    -webkit-transition: All 0.2s ease;
+                    -moz-transition: All 0.2s ease;
+                    -o-transition: All 0.2s ease;
+                    -ms-transition: All 0.2s ease;
+                    transition: All 0.2s ease;
+                }
+
+                #box-1 a.link-2 {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:11px;
+                    line-height:18px;
+                    padding:0;
+                    margin:70px 0 0 30px;
+                    color:#0b7159;
+                    border-bottom:1px solid #0b7159;
+                    cursor:pointer;
+                    float:left;
+                    position:relative;
+                    z-index:20;
+                }
+
+                #box-1 a.link-2:hover {
+                    border-bottom:1px solid rgba(0,0,0,0);
+                }
+
+                .img1-1 {
+                    width:437px;
+                    height:389px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/p1.png') no-repeat top center;
+                    position:absolute;
+                    top:390px;
+                    right:-200px;
+                    z-index:10;
+                }
+
+                .img1-2 {
+                    width:417px;
+                    height:456px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/p2.png') no-repeat top center;
+                    position:absolute;
+                    top:180px;
+                    right:-40px;
+                    z-index:9;
+                }
+
+                .img1-3 {
+                    width:250px;
+                    height:453px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/p3.png') no-repeat top center;
+                    position:absolute;
+                    top:50px;
+                    right:-60px;
+                    z-index:8;
+                }
+            }
+
+            @media all and (max-width: 1020px) {
+                #elements-1 {
+                    width:100%;
+                    padding:70px 0 0 0;
+                    margin:0;
+                    position:relative;
+                    background:url('../images/e1.png') repeat top center;
+                }
+
+                #box-1 {
+                    width:660px;
+                    padding:70px 0 600px 0;
+                    margin:0 auto;
+                    position:relative;
+                    text-align:center;
+                    z-index:5;
+                }
+
+                #box-1 h2 {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:32px;
+                    line-height:50px;
+                    max-width:650px;
+                    padding:0;
+                    margin:0;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                #box-1 h1 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:18px;
+                    line-height:28px;
+                    padding:0;
+                    margin:25px 0 0 0;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                .sp1-1 {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                    color:#0b7159;
+                }
+
+                .sp1-2 {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                }
+
+                #box-1 h3 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:14px;
+                    line-height:24px;
+                    padding:0;
+                    margin:20px 0 0 0;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                #box-1 h3 span {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                    color:#0b7159;
+                }
+
+                #box-1 a.link-1 {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:11px;
+                    line-height:18px;
+                    padding:0;
+                    margin:0 auto;
+                    color:#0b7159;
+                    border-bottom:1px solid #0b7159;
+                    cursor:pointer;
+                    display:inline-block;
+                    position:relative;
+                    z-index:20;
+                }
+
+                #box-1 a.link-1:hover {
+                    border-bottom:1px solid rgba(0,0,0,0);
+                }
+
+                #box-1 p {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:13px;
+                    line-height:20px;
+                    width:210px;
+                    padding:60px 0 20px 0;
+                    margin:70px 5px 0 5px;
+                    color:#131514;
+                    cursor:default;
+                    background:#ffffff;
+                    border-radius:10px;
+                    -webkit-border-radius:10px;
+                    -moz-border-radius:10px;
+                    -khtml-border-radius:10px;
+                    position:relative;
+                    float:left;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(28,29,34,0.1);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(28,29,34,0.1);
+                    box-shadow: 0 15px 30px 0 rgba(28,29,34,0.1);
+                }
+
+                #box-1 p span {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                }
+
+                #box-1 p::after {
+                    content:'';
+                    width:80px;
+                    height:80px;
+                    padding:0;
+                    margin:0;
+                    border-radius:100%;
+                    -webkit-border-radius:100%;
+                    -moz-border-radius:100%;
+                    -khtml-border-radius:100%;
+                    position:absolute;
+                    top:-40px;
+                    left:calc(50% - 40px);
+                    z-index:auto;
+                }
+
+                #box-1 p.p1-1::after { background:url('../images/ico-1.svg') no-repeat center center #0b7159; }
+                #box-1 p.p1-2::after { background:url('../images/ico-2.svg') no-repeat center center #0b7159; }
+                #box-1 p.p1-3::after { background:url('../images/ico-3.svg') no-repeat center center #0b7159; }
+
+                .button-1 {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:14px;
+                    line-height:56px;
+                    width:240px;
+                    height:60px;
+                    padding:0;
+                    margin:50px 0 0 130px;
+                    outline:none;
+                    cursor:pointer;
+                    -webkit-appearance: none;
+                    -moz-appearance:none;
+                    color:#ffffff;
+                    background:#0b7159;
+                    border:none;
+                    border-radius:30px;
+                    -webkit-border-radius:30px;
+                    -moz-border-radius:30px;
+                    -khtml-border-radius:30px;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    float:left;
+                    position:relative;
+                    z-index:20;
+                }
+
+                .button-1:hover {
+                    background:#131514;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    outline:none;
+                }
+
+                .button-1:hover, .button-1:not(:hover) {
+                    -webkit-transition: All 0.2s ease;
+                    -moz-transition: All 0.2s ease;
+                    -o-transition: All 0.2s ease;
+                    -ms-transition: All 0.2s ease;
+                    transition: All 0.2s ease;
+                }
+
+                #box-1 a.link-2 {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:11px;
+                    line-height:18px;
+                    padding:0;
+                    margin:70px 0 0 30px;
+                    color:#0b7159;
+                    border-bottom:1px solid #0b7159;
+                    cursor:pointer;
+                    float:left;
+                    position:relative;
+                    z-index:20;
+                }
+
+                #box-1 a.link-2:hover {
+                    border-bottom:1px solid rgba(0,0,0,0);
+                }
+
+                .img1-1 {
+                    width:437px;
+                    height:389px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/p1.png') no-repeat top center;
+                    position:absolute;
+                    top:1040px;
+                    right:50px;
+                    z-index:10;
+                }
+
+                .img1-2 {
+                    width:417px;
+                    height:456px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/p2.png') no-repeat top center;
+                    position:absolute;
+                    top:830px;
+                    right:210px;
+                    z-index:9;
+                }
+
+                .img1-3 {
+                    width:250px;
+                    height:453px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/p3.png') no-repeat top center;
+                    position:absolute;
+                    top:700px;
+                    right:210px;
+                    z-index:8;
+                }
+            }
+
+            @media all and (max-width: 720px) {
+                #elements-1 {
+                    width:100%;
+                    padding:60px 0 0 0;
+                    margin:0;
+                    position:relative;
+                    background:url('../images/e1.png') repeat top center;
+                    -webkit-background-size: 1200px auto;
+                    -moz-background-size: 1200px auto;
+                    -o-background-size: 1200px auto;
+                    background-size: 1200px auto;
+                }
+
+                #box-1 {
+                    width:360px;
+                    padding:50px 0 400px 0;
+                    margin:0 auto;
+                    position:relative;
+                    text-align:center;
+                    z-index:5;
+                }
+
+                #box-1 h2 {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:24px;
+                    line-height:34px;
+                    max-width:340px;
+                    padding:0;
+                    margin:0 auto;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                #box-1 h1 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:15px;
+                    line-height:22px;
+                    max-width:355px;
+                    padding:0;
+                    margin:20px auto 0 auto;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                #box-1 h1 br {
+                    display:none;
+                }
+
+                .sp1-1 {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                    color:#0b7159;
+                }
+
+                .sp1-2 {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                }
+
+                #box-1 h3 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:14px;
+                    line-height:22px;
+                    padding:0;
+                    margin:15px auto 0 auto;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                #box-1 h3 span {
+                    width:100%;
+                    display:inline-block;
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                    color:#0b7159;
+                }
+
+                #box-1 a.link-1 {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:11px;
+                    line-height:18px;
+                    padding:0;
+                    margin:0 auto;
+                    color:#0b7159;
+                    border-bottom:1px solid #0b7159;
+                    cursor:pointer;
+                    display:inline-block;
+                    position:relative;
+                    z-index:20;
+                }
+
+                #box-1 a.link-1:hover {
+                    border-bottom:1px solid rgba(0,0,0,0);
+                }
+
+                #box-1 p {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:11px;
+                    line-height:17px;
+                    width:33.33%;
+                    padding:50px 0 0 0;
+                    margin:70px 0 0 0;
+                    color:#131514;
+                    cursor:default;
+                    background:none;
+                    border-radius:10px;
+                    -webkit-border-radius:10px;
+                    -moz-border-radius:10px;
+                    -khtml-border-radius:10px;
+                    position:relative;
+                    float:left;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(28,29,34,0);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(28,29,34,0);
+                    box-shadow: 0 15px 30px 0 rgba(28,29,34,0);
+                }
+
+                #box-1 p br {
+                    display:none;
+                }
+
+                #box-1 p br.br361 {
+                    display:block;
+                }
+
+                #box-1 p span {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                }
+
+                #box-1 p::after {
+                    content:'';
+                    width:70px;
+                    height:70px;
+                    padding:0;
+                    margin:0;
+                    border-radius:100%;
+                    -webkit-border-radius:100%;
+                    -moz-border-radius:100%;
+                    -khtml-border-radius:100%;
+                    position:absolute;
+                    top:-35px;
+                    left:calc(50% - 35px);
+                    z-index:auto;
+                }
+
+                #box-1 p.p1-1::after { background:url('../images/ico-1.svg') no-repeat center center #0b7159;
+                    -webkit-background-size: auto 24px;
+                    -moz-background-size: auto 24px;
+                    -o-background-size: auto 24px;
+                    background-size: auto 24px; }
+                #box-1 p.p1-2::after { background:url('../images/ico-2.svg') no-repeat center center #0b7159;
+                    -webkit-background-size: auto 24px;
+                    -moz-background-size: auto 24px;
+                    -o-background-size: auto 24px;
+                    background-size: auto 24px; }
+                #box-1 p.p1-3::after { background:url('../images/ico-3.svg') no-repeat center center #0b7159;
+                    -webkit-background-size: auto 24px;
+                    -moz-background-size: auto 24px;
+                    -o-background-size: auto 24px;
+                    background-size: auto 24px; }
+
+                .button-1 {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:14px;
+                    line-height:56px;
+                    width:240px;
+                    height:60px;
+                    padding:0;
+                    margin:40px auto 0 auto;
+                    outline:none;
+                    cursor:pointer;
+                    -webkit-appearance: none;
+                    -moz-appearance:none;
+                    color:#ffffff;
+                    background:#0b7159;
+                    border:none;
+                    border-radius:30px;
+                    -webkit-border-radius:30px;
+                    -moz-border-radius:30px;
+                    -khtml-border-radius:30px;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    float:none;
+                    position:relative;
+                    z-index:20;
+                }
+
+                .button-1:hover {
+                    background:#131514;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    outline:none;
+                }
+
+                .button-1:hover, .button-1:not(:hover) {
+                    -webkit-transition: All 0.2s ease;
+                    -moz-transition: All 0.2s ease;
+                    -o-transition: All 0.2s ease;
+                    -ms-transition: All 0.2s ease;
+                    transition: All 0.2s ease;
+                }
+
+                #box-1 a.link-2 {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:11px;
+                    line-height:18px;
+                    padding:0;
+                    margin:20px auto 0 auto;
+                    color:#0b7159;
+                    border-bottom:1px solid #0b7159;
+                    cursor:pointer;
+                    float:none;
+                    position:relative;
+                    display:inline-block;
+                    z-index:20;
+                }
+
+                #box-1 a.link-2:hover {
+                    border-bottom:1px solid rgba(0,0,0,0);
+                }
+
+                .img1-1 {
+                    width:280px;
+                    height:389px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/p1.png') no-repeat top center;
+                    -webkit-background-size: 100% auto;
+                    -moz-background-size: 100% auto;
+                    -o-background-size: 100% auto;
+                    background-size: 100% auto;
+                    position:absolute;
+                    top:940px;
+                    right:0;
+                    z-index:10;
+                }
+
+                .img1-2 {
+                    width:250px;
+                    height:456px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/p2.png') no-repeat top center;
+                    -webkit-background-size: 100% auto;
+                    -moz-background-size: 100% auto;
+                    -o-background-size: 100% auto;
+                    background-size: 100% auto;
+                    position:absolute;
+                    top:830px;
+                    right:auto;
+                    left:0;
+                    z-index:9;
+                }
+
+                .img1-3 {
+                    width:150px;
+                    height:453px;
+                    padding:0;
+                    margin:0;
+                    background:url('../images/p3.png') no-repeat top center;
+                    -webkit-background-size: 100% auto;
+                    -moz-background-size: 100% auto;
+                    -o-background-size: 100% auto;
+                    background-size: 100% auto;
+                    position:absolute;
+                    top:730px;
+                    right:calc(50% - 75px);
+                    z-index:8;
+                }
+            }
+
+/* box-2 */
+
+		#box-2-w {
+            width:100%;
+            padding:0;
+            margin:0;
+            position:relative;
+            background:#ffffff;
+		}
+
+        #box-2 {
+            width:1140px;
+            padding:70px 0 80px 0;
+            margin:0 auto;
+            position:relative;
+            text-align:center;
+            z-index:5;
+        }
+        
+        #box-2 h2 {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:center;
+            font-size:20px;
+            line-height:40px;
+            padding:0;
+            margin:0 auto 60px auto;
+            color:#131514;
+            cursor:default;
+        }
+
+        #box-2 h2 span {
+            font-family: "OPPOSANS-U";
+            font-weight:normal;
+            font-style:normal;
+            text-align:center;
+            font-size:28px;
+            line-height:40px;
+            padding:0;
+            margin:0;
+            color:#131514;
+            cursor:default;
+            display:inline-block;
+        }
+
+        .models {
+            width:590px;
+            padding:0;
+            margin:0;
+            position:relative;
+            float:left;
+        }
+
+        .model {
+            width:285px;
+            height:285px;
+            overflow:hidden;
+            padding:0;
+            margin:0 10px 10px 0;
+            position:relative;
+            float:left;
+            border-radius:10px;
+            -webkit-border-radius:10px;
+            -moz-border-radius:10px;
+            -khtml-border-radius:10px;
+        }
+
+        .model img {
+            height:100%;
+            padding:0;
+            margin:0;
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:6;
+        }
+
+        .model h3 {
+            font-family: "OPPOSANS-B";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:17px;
+            line-height:27px;
+            padding:0;
+            margin:0;
+            color:#ffffff;
+            cursor:default;
+            position:absolute;
+            left:25px;
+            bottom:45px;
+            z-index:7;
+        }
+
+        .model p {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:10px;
+            line-height:14px;
+            padding:0;
+            margin:0;
+            color:#ffffff;
+            cursor:default;
+            position:absolute;
+            left:25px;
+            bottom:25px;
+            z-index:8;
+        }
+
+        .model p span {
+            margin:0 10px;
+            display:inline-block;
+        }
+
+        .model p a {
+            font-family: "OPPOSANS-B";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:10px;
+            line-height:14px;
+            padding:0;
+            margin:0;
+            color:#ffffff;
+            cursor:pointer;
+        }
+
+        .model p a:hover {
+            opacity:0.5;
+        }
+
+        .box-2 {
+            width:500px;
+            padding:0;
+            margin:0;
+            position:relative;
+            float:right;
+        }
+        
+        .p2-1 {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:16px;
+            line-height:24px;
+            padding:0;
+            margin:0;
+            color:#131514;
+            cursor:default;
+        }
+
+        .p2-2 {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:14px;
+            line-height:23px;
+            padding:0 0 0 40px;
+            color:#131514;
+            cursor:default;
+            position:relative;
+        }
+
+        .p2-2-1 { margin:25px 0 0 0; }
+        .p2-2-2 { margin:15px 0 0 0; }
+
+        .p2-2::after {
+            content:'';
+            width:10px;
+            height:10px;
+            padding:0;
+            margin:0;
+            background:#0b7159;
+            cursor:default;
+            position:absolute;
+            top:7px;
+            left:15px;
+            z-index:auto;
+            border-radius:100%;
+            -webkit-border-radius:100%;
+            -moz-border-radius:100%;
+            -khtml-border-radius:100%;
+            -moz-box-shadow: 0 5px 10px 0 rgba(11,113,89,0.3);
+            -webkit-box-shadow: 0 5px 10px 0 rgba(11,113,89,0.3);
+            box-shadow: 0 5px 10px 0 rgba(11,113,89,0.3);
+        }
+
+        .p2-2 span {
+            font-family: "OPPOSANS-U";
+            font-weight:normal;
+        }
+
+        .p2-3 {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:16px;
+            line-height:24px;
+            padding:0;
+            margin:25px 0 0 0;
+            color:#131514;
+            cursor:default;
+        }
+
+        .p2-3 span {
+            font-family: "OPPOSANS-U";
+            font-weight:normal;
+        }
+
+        .button-2 {
+            font-family: "OPPOSANS-B";
+            font-weight:normal;
+            font-style:normal;
+            text-align:center;
+            font-size:14px;
+            line-height:56px;
+            width:240px;
+            height:60px;
+            padding:0;
+            margin:40px 0 0 0;
+            outline:none;
+            cursor:pointer;
+            -webkit-appearance: none;
+            -moz-appearance:none;
+            color:#ffffff;
+            background:#0b7159;
+            border:none;
+            border-radius:30px;
+            -webkit-border-radius:30px;
+            -moz-border-radius:30px;
+            -khtml-border-radius:30px;
+            -moz-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+            -webkit-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+            box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+            position:relative;
+            z-index:20;
+        }
+
+        .button-2:hover {
+            background:#131514;
+            -moz-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+            -webkit-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+            box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+            outline:none;
+        }
+
+        .button-2:hover, .button-2:not(:hover) {
+            -webkit-transition: All 0.2s ease;
+            -moz-transition: All 0.2s ease;
+            -o-transition: All 0.2s ease;
+            -ms-transition: All 0.2s ease;
+            transition: All 0.2s ease;
+        }
+
+            @media all and (max-width: 1200px) {
+                #box-2 {
+                    width:960px;
+                    padding:70px 0 80px 0;
+                    margin:0 auto;
+                    position:relative;
+                    text-align:center;
+                    z-index:5;
+                }
+
+                #box-2 h2 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:20px;
+                    line-height:40px;
+                    padding:0;
+                    margin:0 auto 60px auto;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                #box-2 h2 span {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:28px;
+                    line-height:40px;
+                    padding:0;
+                    margin:0;
+                    color:#131514;
+                    cursor:default;
+                    display:inline-block;
+                }
+
+                .models {
+                    width:500px;
+                    padding:0;
+                    margin:0;
+                    position:relative;
+                    float:left;
+                }
+
+                .model {
+                    width:240px;
+                    height:240px;
+                    overflow:hidden;
+                    padding:0;
+                    margin:0 10px 10px 0;
+                    position:relative;
+                    float:left;
+                    border-radius:10px;
+                    -webkit-border-radius:10px;
+                    -moz-border-radius:10px;
+                    -khtml-border-radius:10px;
+                }
+
+                .model img {
+                    height:100%;
+                    padding:0;
+                    margin:0;
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    z-index:6;
+                }
+
+                .model h3 {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:17px;
+                    line-height:27px;
+                    padding:0;
+                    margin:0;
+                    color:#ffffff;
+                    cursor:default;
+                    position:absolute;
+                    left:25px;
+                    bottom:45px;
+                    z-index:7;
+                }
+
+                .model p {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:10px;
+                    line-height:14px;
+                    padding:0;
+                    margin:0;
+                    color:#ffffff;
+                    cursor:default;
+                    position:absolute;
+                    left:25px;
+                    bottom:25px;
+                    z-index:8;
+                }
+
+                .model p span {
+                    margin:0 10px;
+                    display:inline-block;
+                }
+
+                .model p a {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:10px;
+                    line-height:14px;
+                    padding:0;
+                    margin:0;
+                    color:#ffffff;
+                    cursor:pointer;
+                }
+
+                .model p a:hover {
+                    opacity:0.5;
+                }
+
+                .box-2 {
+                    width:420px;
+                    padding:0;
+                    margin:0;
+                    position:relative;
+                    float:right;
+                }
+
+                .p2-1 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:16px;
+                    line-height:24px;
+                    padding:0;
+                    margin:0;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                .p2-2 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:14px;
+                    line-height:23px;
+                    padding:0 0 0 40px;
+                    color:#131514;
+                    cursor:default;
+                    position:relative;
+                }
+
+                .p2-2-1 { margin:25px 0 0 0; }
+                .p2-2-2 { margin:15px 0 0 0; }
+
+                .p2-2::after {
+                    content:'';
+                    width:10px;
+                    height:10px;
+                    padding:0;
+                    margin:0;
+                    background:#0b7159;
+                    cursor:default;
+                    position:absolute;
+                    top:7px;
+                    left:15px;
+                    z-index:auto;
+                    border-radius:100%;
+                    -webkit-border-radius:100%;
+                    -moz-border-radius:100%;
+                    -khtml-border-radius:100%;
+                    -moz-box-shadow: 0 5px 10px 0 rgba(11,113,89,0.3);
+                    -webkit-box-shadow: 0 5px 10px 0 rgba(11,113,89,0.3);
+                    box-shadow: 0 5px 10px 0 rgba(11,113,89,0.3);
+                }
+
+                .p2-2 span {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                }
+
+                .p2-3 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:16px;
+                    line-height:24px;
+                    padding:0;
+                    margin:25px 0 0 0;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                .p2-3 span {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                }
+
+                .button-2 {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:14px;
+                    line-height:56px;
+                    width:240px;
+                    height:60px;
+                    padding:0;
+                    margin:40px 0 0 0;
+                    outline:none;
+                    cursor:pointer;
+                    -webkit-appearance: none;
+                    -moz-appearance:none;
+                    color:#ffffff;
+                    background:#0b7159;
+                    border:none;
+                    border-radius:30px;
+                    -webkit-border-radius:30px;
+                    -moz-border-radius:30px;
+                    -khtml-border-radius:30px;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    position:relative;
+                    z-index:20;
+                }
+
+                .button-2:hover {
+                    background:#131514;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    outline:none;
+                }
+
+                .button-2:hover, .button-2:not(:hover) {
+                    -webkit-transition: All 0.2s ease;
+                    -moz-transition: All 0.2s ease;
+                    -o-transition: All 0.2s ease;
+                    -ms-transition: All 0.2s ease;
+                    transition: All 0.2s ease;
+                }
+            }
+
+        .br661 {
+            display:none;
+        }
+
+            @media all and (max-width: 1020px) {
+                #box-2 {
+                    width:660px;
+                    padding:150px 0 80px 0;
+                    margin:0 auto;
+                    position:relative;
+                    text-align:center;
+                    z-index:5;
+                }
+
+                #box-2 h2 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:20px;
+                    line-height:36px;
+                    padding:0;
+                    max-width:640px;
+                    margin:0 auto 60px auto;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                #box-2 h2 span {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:26px;
+                    line-height:36px;
+                    padding:0;
+                    margin:0;
+                    color:#131514;
+                    cursor:default;
+                    display:inline-block;
+                }
+
+                #box-2 h2 br {
+                    display:none;
+                }
+
+                #box-2 h2 br.br661 {
+                    display:block;
+                }
+
+                .models {
+                    width:100%;
+                    padding:0;
+                    margin:0;
+                    position:relative;
+                    float:none;
+                }
+
+                .model {
+                    width:320px;
+                    height:285px;
+                    overflow:hidden;
+                    padding:0;
+                    margin:0 5px 10px 5px;
+                    position:relative;
+                    float:left;
+                    border-radius:10px;
+                    -webkit-border-radius:10px;
+                    -moz-border-radius:10px;
+                    -khtml-border-radius:10px;
+                }
+
+                .model img {
+                    height:100%;
+                    padding:0;
+                    margin:0;
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    z-index:6;
+                }
+
+                .model h3 {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:17px;
+                    line-height:27px;
+                    padding:0;
+                    margin:0;
+                    color:#ffffff;
+                    cursor:default;
+                    position:absolute;
+                    left:25px;
+                    bottom:45px;
+                    z-index:7;
+                }
+
+                .model p {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:10px;
+                    line-height:14px;
+                    padding:0;
+                    margin:0;
+                    color:#ffffff;
+                    cursor:default;
+                    position:absolute;
+                    left:25px;
+                    bottom:25px;
+                    z-index:8;
+                }
+
+                .model p span {
+                    margin:0 10px;
+                    display:inline-block;
+                }
+
+                .model p a {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:10px;
+                    line-height:14px;
+                    padding:0;
+                    margin:0;
+                    color:#ffffff;
+                    cursor:pointer;
+                }
+
+                .model p a:hover {
+                    opacity:0.5;
+                }
+
+                .box-2 {
+                    width:100%;
+                    padding:0;
+                    margin:50px 0 0 0;
+                    position:relative;
+                    float:none;
+                }
+
+                .p2-1 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:16px;
+                    line-height:24px;
+                    padding:0;
+                    margin:0;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                .p2-2 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:14px;
+                    line-height:23px;
+                    padding:0 0 0 40px;
+                    max-width:400px;
+                    color:#131514;
+                    cursor:default;
+                    position:relative;
+                }
+
+                .p2-2-1 { margin:25px 0 0 0; }
+                .p2-2-2 { margin:15px 0 0 0; }
+
+                .p2-2::after {
+                    content:'';
+                    width:10px;
+                    height:10px;
+                    padding:0;
+                    margin:0;
+                    background:#0b7159;
+                    cursor:default;
+                    position:absolute;
+                    top:7px;
+                    left:15px;
+                    z-index:auto;
+                    border-radius:100%;
+                    -webkit-border-radius:100%;
+                    -moz-border-radius:100%;
+                    -khtml-border-radius:100%;
+                    -moz-box-shadow: 0 5px 10px 0 rgba(11,113,89,0.3);
+                    -webkit-box-shadow: 0 5px 10px 0 rgba(11,113,89,0.3);
+                    box-shadow: 0 5px 10px 0 rgba(11,113,89,0.3);
+                }
+
+                .p2-2 span {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                }
+
+                .p2-3 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:16px;
+                    line-height:24px;
+                    padding:0;
+                    margin:25px 0 0 0;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                .p2-3 span {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                }
+
+                .button-2 {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:14px;
+                    line-height:56px;
+                    width:240px;
+                    height:60px;
+                    padding:0;
+                    margin:40px 0 0 0;
+                    outline:none;
+                    cursor:pointer;
+                    -webkit-appearance: none;
+                    -moz-appearance:none;
+                    color:#ffffff;
+                    background:#0b7159;
+                    border:none;
+                    border-radius:30px;
+                    -webkit-border-radius:30px;
+                    -moz-border-radius:30px;
+                    -khtml-border-radius:30px;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    position:relative;
+                    z-index:20;
+                }
+
+                .button-2:hover {
+                    background:#131514;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    outline:none;
+                }
+
+                .button-2:hover, .button-2:not(:hover) {
+                    -webkit-transition: All 0.2s ease;
+                    -moz-transition: All 0.2s ease;
+                    -o-transition: All 0.2s ease;
+                    -ms-transition: All 0.2s ease;
+                    transition: All 0.2s ease;
+                }
+            }
+
+            @media all and (max-width: 720px) {
+                #box-2 {
+                    width:360px;
+                    padding:110px 0 70px 0;
+                    margin:0 auto;
+                    position:relative;
+                    text-align:center;
+                    z-index:5;
+                }
+
+                #box-2 h2 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:16px;
+                    line-height:24px;
+                    padding:0;
+                    max-width:640px;
+                    margin:0 auto 40px auto;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                #box-2 h2 span {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:22px;
+                    line-height:32px;
+                    padding:0;
+                    margin:0 0 15px 0;
+                    color:#131514;
+                    cursor:default;
+                    display:inline-block;
+                }
+
+                #box-2 h2 br {
+                    display:none;
+                }
+
+                #box-2 h2 br.br661 {
+                    display:none;
+                }
+
+                .models {
+                    width:100%;
+                    padding:0;
+                    margin:0;
+                    position:relative;
+                    float:none;
+                }
+
+                .model {
+                    width:360px;
+                    height:285px;
+                    overflow:hidden;
+                    padding:0;
+                    margin:0 0 10px 0;
+                    position:relative;
+                    float:left;
+                    border-radius:10px;
+                    -webkit-border-radius:10px;
+                    -moz-border-radius:10px;
+                    -khtml-border-radius:10px;
+                }
+
+                .model img {
+                    height:100%;
+                    padding:0;
+                    margin:0;
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    z-index:6;
+                }
+
+                .model h3 {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:17px;
+                    line-height:27px;
+                    padding:0;
+                    margin:0;
+                    color:#ffffff;
+                    cursor:default;
+                    position:absolute;
+                    left:25px;
+                    bottom:45px;
+                    z-index:7;
+                }
+
+                .model p {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:10px;
+                    line-height:14px;
+                    padding:0;
+                    margin:0;
+                    color:#ffffff;
+                    cursor:default;
+                    position:absolute;
+                    left:25px;
+                    bottom:25px;
+                    z-index:8;
+                }
+
+                .model p span {
+                    margin:0 10px;
+                    display:inline-block;
+                }
+
+                .model p a {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:10px;
+                    line-height:14px;
+                    padding:0;
+                    margin:0;
+                    color:#ffffff;
+                    cursor:pointer;
+                }
+
+                .model p a:hover {
+                    opacity:0.5;
+                }
+
+                .box-2 {
+                    width:100%;
+                    padding:0;
+                    margin:30px 0 0 0;
+                    position:relative;
+                    float:none;
+                }
+
+                .p2-1 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:15px;
+                    line-height:23px;
+                    padding:0;
+                    margin:0;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                .p2-2 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:14px;
+                    line-height:23px;
+                    padding:0 0 0 25px;
+                    max-width:400px;
+                    color:#131514;
+                    cursor:default;
+                    position:relative;
+                }
+
+                .p2-2-1 { margin:25px 0 0 0; }
+                .p2-2-2 { margin:15px 0 0 0; }
+
+                .p2-2::after {
+                    content:'';
+                    width:10px;
+                    height:10px;
+                    padding:0;
+                    margin:0;
+                    background:#0b7159;
+                    cursor:default;
+                    position:absolute;
+                    top:7px;
+                    left:0;
+                    z-index:auto;
+                    border-radius:100%;
+                    -webkit-border-radius:100%;
+                    -moz-border-radius:100%;
+                    -khtml-border-radius:100%;
+                    -moz-box-shadow: 0 5px 10px 0 rgba(11,113,89,0.3);
+                    -webkit-box-shadow: 0 5px 10px 0 rgba(11,113,89,0.3);
+                    box-shadow: 0 5px 10px 0 rgba(11,113,89,0.3);
+                }
+
+                .p2-2 span {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                }
+
+                .p2-3 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:16px;
+                    line-height:24px;
+                    padding:0;
+                    margin:25px 0 0 0;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                .p2-3 span {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                }
+
+                .button-2 {
+                    font-family: "OPPOSANS-B";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:14px;
+                    line-height:56px;
+                    width:240px;
+                    height:60px;
+                    padding:0;
+                    margin:40px 0 0 0;
+                    outline:none;
+                    cursor:pointer;
+                    -webkit-appearance: none;
+                    -moz-appearance:none;
+                    color:#ffffff;
+                    background:#0b7159;
+                    border:none;
+                    border-radius:30px;
+                    -webkit-border-radius:30px;
+                    -moz-border-radius:30px;
+                    -khtml-border-radius:30px;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    position:relative;
+                    z-index:20;
+                }
+
+                .button-2:hover {
+                    background:#131514;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    outline:none;
+                }
+
+                .button-2:hover, .button-2:not(:hover) {
+                    -webkit-transition: All 0.2s ease;
+                    -moz-transition: All 0.2s ease;
+                    -o-transition: All 0.2s ease;
+                    -ms-transition: All 0.2s ease;
+                    transition: All 0.2s ease;
+                }
+            }
+
+/* box-3 */
+
+		#box-3-w {
+            width:100%;
+            padding:0;
+            margin:0;
+            position:relative;
+            background-image: linear-gradient(to right, #d6e2df, #f5f9f8, #d6e2df);
+            background-image: -webkit-linear-gradient(to right, #d6e2df, #f5f9f8, #d6e2df);
+            background-image: -moz-linear-gradient(to right, #d6e2df, #f5f9f8, #d6e2df);
+            background-image: -o-linear-gradient(to right, #d6e2df, #f5f9f8, #d6e2df);
+            background-image: -ms-linear-gradient(to right, #d6e2df, #f5f9f8, #d6e2df);
+		}
+
+        #elements-2-w {
+            width:100%;
+            overflow:hidden;
+            padding:0;
+            margin:0;
+            position:relative;
+        }
+
+        #elements-2 {
+            width:100%;
+            padding:150px 0 0 0;
+            margin:-150px 0 0 0;
+            position:relative;
+            background:url('../images/e2.png') repeat top center;
+        }
+
+        #box-3 {
+            width:1140px;
+            padding:70px 0 80px 0;
+            margin:0 auto;
+            position:relative;
+            text-align:center;
+            z-index:5;
+        }
+        
+        #box-3 h2 {
+            font-family: "OPPOSANS-U";
+            font-weight:normal;
+            font-style:normal;
+            text-align:center;
+            font-size:28px;
+            line-height:40px;
+            padding:0;
+            margin:0 auto;
+            color:#131514;
+            cursor:default;
+        }
+
+        .logos {
+            width:100%;
+            padding:0;
+            margin:30px auto 0 auto;
+            position:relative;
+        }
+
+        #box-3 a {
+            height:80px;
+            padding:0;
+            display:inline-block;
+            cursor:pointer;
+            -moz-box-shadow: 0 5px 30px 0 rgba(28,29,34,0.1);
+            -webkit-box-shadow: 0 5px 30px 0 rgba(28,29,34,0.1);
+            box-shadow: 0 5px 30px 0 rgba(28,29,34,0.1);
+            border-radius:10px;
+            -webkit-border-radius:10px;
+            -moz-border-radius:10px;
+            -khtml-border-radius:10px;
+        }
+
+        #box-3 a.logo-1 { margin:30px 15px 0 15px; width:150px; background:url('../images/l1.png') no-repeat center center #ffffff; }
+        #box-3 a.logo-2 { margin:30px 15px 0 15px; width:190px; background:url('../images/l2.png') no-repeat center center #ffffff; }
+        #box-3 a.logo-3 { margin:30px 15px 0 15px; width:200px; background:url('../images/l3.png') no-repeat center center #ffffff; }
+        #box-3 a.logo-4 { margin:30px 15px 0 15px; width:220px; background:url('../images/l4.png') no-repeat center center #ffffff; }
+        #box-3 a.logo-5 { margin:30px 15px 0 15px; width:230px; background:url('../images/l5.png') no-repeat center center #ffffff; }
+        #box-3 a.logo-6 { margin:30px 15px 0 15px; width:200px; background:url('../images/l6.png') no-repeat center center #ffffff; }
+        #box-3 a.logo-7 { margin:30px 15px 0 15px; width:185px; background:url('../images/l7.png') no-repeat center center #ffffff; }
+        #box-3 a.logo-8 { margin:30px 15px 0 15px; width:130px; background:url('../images/l8.png') no-repeat center center #ffffff; }
+
+        #box-3 a:hover {
+            -moz-box-shadow: 0 5px 30px 0 rgba(28,29,34,0);
+            -webkit-box-shadow: 0 5px 30px 0 rgba(28,29,34,0);
+            box-shadow: 0 5px 30px 0 rgba(28,29,34,0);
+        }
+
+        #box-3 p {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:center;
+            font-size:14px;
+            line-height:26px;
+            max-width:900px;
+            padding:0;
+            margin:50px auto 0 auto;
+            color:#131514;
+            cursor:default;
+        }
+
+            @media all and (max-width: 1200px) {
+
+                #box-3 {
+                    width:960px;
+                    padding:70px 0 80px 0;
+                    margin:0 auto;
+                    position:relative;
+                    text-align:center;
+                    z-index:5;
+                }
+            }
+
+            @media all and (max-width: 1020px) {
+                #elements-2 {
+                    width:100%;
+                    padding:150px 0 0 0;
+                    margin:-150px 0 0 0;
+                    position:relative;
+                    background:url('../images/e2.png') repeat top center;
+                }
+
+                #box-3 {
+                    width:660px;
+                    padding:65px 0 70px 0;
+                    margin:0 auto;
+                    position:relative;
+                    text-align:center;
+                    z-index:5;
+                }
+
+                #box-3 h2 {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:26px;
+                    line-height:36px;
+                    padding:0;
+                    margin:0 auto;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                .logos {
+                    width:100%;
+                    padding:0;
+                    margin:40px auto 0 auto;
+                    position:relative;
+                }
+
+                #box-3 a {
+                    height:80px;
+                    padding:0;
+                    display:inline-block;
+                    cursor:pointer;
+                    -moz-box-shadow: 0 5px 30px 0 rgba(28,29,34,0.1);
+                    -webkit-box-shadow: 0 5px 30px 0 rgba(28,29,34,0.1);
+                    box-shadow: 0 5px 30px 0 rgba(28,29,34,0.1);
+                    border-radius:10px;
+                    -webkit-border-radius:10px;
+                    -moz-border-radius:10px;
+                    -khtml-border-radius:10px;
+                }
+
+                #box-3 a.logo-1 { margin:20px 10px 0 10px; width:150px; background:url('../images/l1.png') no-repeat center center #ffffff; }
+                #box-3 a.logo-2 { margin:20px 10px 0 10px; width:190px; background:url('../images/l2.png') no-repeat center center #ffffff; }
+                #box-3 a.logo-3 { margin:20px 10px 0 10px; width:200px; background:url('../images/l3.png') no-repeat center center #ffffff; }
+                #box-3 a.logo-4 { margin:20px 10px 0 10px; width:220px; background:url('../images/l4.png') no-repeat center center #ffffff; }
+                #box-3 a.logo-5 { margin:20px 10px 0 10px; width:230px; background:url('../images/l5.png') no-repeat center center #ffffff; }
+                #box-3 a.logo-6 { margin:20px 10px 0 10px; width:200px; background:url('../images/l6.png') no-repeat center center #ffffff; }
+                #box-3 a.logo-7 { margin:20px 10px 0 10px; width:185px; background:url('../images/l7.png') no-repeat center center #ffffff; }
+                #box-3 a.logo-8 { margin:20px 10px 0 10px; width:130px; background:url('../images/l8.png') no-repeat center center #ffffff; }
+
+                #box-3 a:hover {
+                    -moz-box-shadow: 0 5px 30px 0 rgba(28,29,34,0);
+                    -webkit-box-shadow: 0 5px 30px 0 rgba(28,29,34,0);
+                    box-shadow: 0 5px 30px 0 rgba(28,29,34,0);
+                }
+
+                #box-3 p {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:14px;
+                    line-height:26px;
+                    max-width:600px;
+                    padding:0;
+                    margin:50px auto 0 auto;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                #box-3 p br {
+                    display:none;
+                }
+            }
+
+            @media all and (max-width: 720px) {
+                #elements-2 {
+                    width:100%;
+                    padding:0;
+                    margin:0;
+                    position:relative;
+                    background:url('../images/e2.png') repeat top center;
+                    -webkit-background-size: 1200px auto;
+                    -moz-background-size: 1200px auto;
+                    -o-background-size: 1200px auto;
+                    background-size: 1200px auto;
+                }
+
+                #box-3 {
+                    width:360px;
+                    padding:60px 0 65px 0;
+                    margin:0 auto;
+                    position:relative;
+                    text-align:center;
+                    z-index:5;
+                }
+
+                #box-3 h2 {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:22px;
+                    line-height:32px;
+                    padding:0;
+                    margin:0 auto;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                .logos {
+                    width:100%;
+                    padding:0;
+                    margin:40px auto 0 auto;
+                    position:relative;
+                }
+
+                #box-3 a {
+                    height:60px;
+                    padding:0;
+                    display:inline-block;
+                    float:left;
+                    cursor:pointer;
+                    -moz-box-shadow: 0 5px 30px 0 rgba(28,29,34,0.1);
+                    -webkit-box-shadow: 0 5px 30px 0 rgba(28,29,34,0.1);
+                    box-shadow: 0 5px 30px 0 rgba(28,29,34,0.1);
+                    border-radius:10px;
+                    -webkit-border-radius:10px;
+                    -moz-border-radius:10px;
+                    -khtml-border-radius:10px;
+                }
+
+                #box-3 a.logo-1 { margin:10px 5px 0 45px; width:110px; background:url('../images/l1.png') no-repeat center center #ffffff; }
+                #box-3 a.logo-2 { margin:10px 5px 0 5px; width:150px; background:url('../images/l2.png') no-repeat center center #ffffff; }
+                #box-3 a.logo-3 { margin:10px 5px 0 5px; width:160px; background:url('../images/l3.png') no-repeat center center #ffffff; }
+                #box-3 a.logo-4 { margin:10px 5px 0 5px; width:180px; background:url('../images/l4.png') no-repeat center center #ffffff; }
+                #box-3 a.logo-5 { margin:10px 5px 0 5px; width:190px; background:url('../images/l5.png') no-repeat center center #ffffff; }
+                #box-3 a.logo-6 { margin:10px 5px 0 5px; width:150px; background:url('../images/l6.png') no-repeat center center #ffffff; }
+                #box-3 a.logo-7 { margin:10px 5px 0 60px; width:140px; background:url('../images/l7.png') no-repeat center center #ffffff; }
+                #box-3 a.logo-8 { margin:10px 5px 0 5px; width:90px; background:url('../images/l8.png') no-repeat center center #ffffff; }
+
+                #box-3 a:hover {
+                    -moz-box-shadow: 0 5px 30px 0 rgba(28,29,34,0);
+                    -webkit-box-shadow: 0 5px 30px 0 rgba(28,29,34,0);
+                    box-shadow: 0 5px 30px 0 rgba(28,29,34,0);
+                }
+
+                #box-3 p {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:14px;
+                    line-height:26px;
+                    max-width:600px;
+                    padding:0;
+                    margin:35px auto 0 auto;
+                    color:#131514;
+                    cursor:default;
+                }
+
+                #box-3 p br {
+                    display:none;
+                }
+            }
+
+/* bottom */
+
+        #bottom-w {
+            width:100%;
+            padding:0;
+            margin:0;
+            position:relative;
+            background:#0b7159;
+        }
+
+        #bottom {
+            width:1140px;
+            padding:20px 0 20px 0;
+            margin:0 auto;
+            position:relative;
+            text-align:center;
+            z-index:5;
+        }
+        
+        .pb-1 {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:12px;
+            line-height:24px;
+            padding:0;
+            margin:8px 0 0 0;
+            color:#ffffff;
+            cursor:default;
+            float:left;
+        }
+
+        .social {
+            width:100px;
+            padding:0;
+            margin:0 140px;
+            position:relative;
+            float:left;
+        }
+
+        .social a {
+            width:40px;
+            height:40px;
+            padding:0;
+            margin:0 5px;
+            position:relative;
+            float:left;
+            cursor:pointer;
+            background:url('../images/tel.svg') no-repeat center center #0b7159;
+            border-radius:100%;
+            -webkit-border-radius:100%;
+            -moz-border-radius:100%;
+            -khtml-border-radius:100%;
+        }
+
+        .social a.facebook { background:url('../images/fb.svg') no-repeat center center #09604c; }
+        .social a.instagram { background:url('../images/ig.svg') no-repeat center center #09604c; }
+
+        .social a.facebook:hover { background:url('../images/fb.svg') no-repeat center center #131514; }
+        .social a.instagram:hover { background:url('../images/ig.svg') no-repeat center center #131514; }
+
+        .pb-2 {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:12px;
+            line-height:24px;
+            padding:0;
+            margin:8px 0 0 0;
+            color:#ffffff;
+            cursor:default;
+            float:left;
+        }
+
+        .pb-3 {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:12px;
+            line-height:24px;
+            padding:0;
+            margin:8px 0 0 0;
+            color:#ffffff;
+            cursor:default;
+            float:right;
+        }
+
+        .pb-2 a,
+        .pb-3 a {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:12px;
+            line-height:16px;
+            padding:0;
+            margin:0;
+            color:#ffffff;
+            border-bottom:1px solid rgba(255,255,255,0.5);
+            cursor:pointer;
+            display:inline-block;
+        }
+
+        .pb-2 a:hover,
+        .pb-3 a:hover {
+            border-bottom:1px solid rgba(255,255,255,0);
+            opacity:0.5;
+        }
+
+            @media all and (max-width: 1200px) {
+
+                #bottom {
+                    width:960px;
+                    padding:20px 0 20px 0;
+                    margin:0 auto;
+                    position:relative;
+                    text-align:center;
+                    z-index:5;
+                }
+
+                .pb-1 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:12px;
+                    line-height:24px;
+                    padding:0;
+                    margin:8px 0 0 0;
+                    color:#ffffff;
+                    cursor:default;
+                    float:left;
+                }
+
+                .social {
+                    width:100px;
+                    padding:0;
+                    margin:0 80px;
+                    position:relative;
+                    float:left;
+                }
+
+                .social a {
+                    width:40px;
+                    height:40px;
+                    padding:0;
+                    margin:0 5px;
+                    position:relative;
+                    float:left;
+                    cursor:pointer;
+                    background:url('../images/tel.svg') no-repeat center center #0b7159;
+                    border-radius:100%;
+                    -webkit-border-radius:100%;
+                    -moz-border-radius:100%;
+                    -khtml-border-radius:100%;
+                }
+
+                .social a.facebook { background:url('../images/fb.svg') no-repeat center center #09604c; }
+                .social a.instagram { background:url('../images/ig.svg') no-repeat center center #09604c; }
+
+                .social a.facebook:hover { background:url('../images/fb.svg') no-repeat center center #131514; }
+                .social a.instagram:hover { background:url('../images/ig.svg') no-repeat center center #131514; }
+
+                .pb-2 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:12px;
+                    line-height:24px;
+                    padding:0;
+                    margin:8px 0 0 0;
+                    color:#ffffff;
+                    cursor:default;
+                    float:left;
+                }
+
+                .pb-3 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:12px;
+                    line-height:24px;
+                    padding:0;
+                    margin:8px 0 0 0;
+                    color:#ffffff;
+                    cursor:default;
+                    float:right;
+                }
+
+                .pb-2 a,
+                .pb-3 a {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:12px;
+                    line-height:16px;
+                    padding:0;
+                    margin:0;
+                    color:#ffffff;
+                    border-bottom:1px solid rgba(255,255,255,0.5);
+                    cursor:pointer;
+                    display:inline-block;
+                }
+
+                .pb-2 a:hover,
+                .pb-3 a:hover {
+                    border-bottom:1px solid rgba(255,255,255,0);
+                    opacity:0.5;
+                }
+            }
+
+            @media all and (max-width: 1020px) {
+
+                #bottom {
+                    width:660px;
+                    padding:40px 0 40px 0;
+                    margin:0 auto;
+                    position:relative;
+                    text-align:center;
+                    z-index:5;
+                }
+
+                .pb-1 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:12px;
+                    line-height:24px;
+                    padding:0;
+                    margin:0;
+                    color:#ffffff;
+                    cursor:default;
+                    float:none;
+                }
+
+                .social {
+                    width:100px;
+                    padding:0;
+                    margin:15px auto;
+                    position:relative;
+                    float:none;
+                }
+
+                .social a {
+                    width:40px;
+                    height:40px;
+                    padding:0;
+                    margin:0 5px;
+                    position:relative;
+                    float:left;
+                    cursor:pointer;
+                    background:url('../images/tel.svg') no-repeat center center #0b7159;
+                    border-radius:100%;
+                    -webkit-border-radius:100%;
+                    -moz-border-radius:100%;
+                    -khtml-border-radius:100%;
+                }
+
+                .social a.facebook { background:url('../images/fb.svg') no-repeat center center #09604c; }
+                .social a.instagram { background:url('../images/ig.svg') no-repeat center center #09604c; }
+
+                .social a.facebook:hover { background:url('../images/fb.svg') no-repeat center center #131514; }
+                .social a.instagram:hover { background:url('../images/ig.svg') no-repeat center center #131514; }
+
+                .pb-2 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:12px;
+                    line-height:24px;
+                    padding:0;
+                    margin:0;
+                    color:#ffffff;
+                    cursor:default;
+                    float:none;
+                }
+
+                .pb-3 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:12px;
+                    line-height:24px;
+                    padding:0;
+                    margin:10px 0 0 0;
+                    color:#ffffff;
+                    cursor:default;
+                    float:none;
+                }
+
+                .pb-2 a,
+                .pb-3 a {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:12px;
+                    line-height:16px;
+                    padding:0;
+                    margin:0;
+                    color:#ffffff;
+                    border-bottom:1px solid rgba(255,255,255,0.5);
+                    cursor:pointer;
+                    display:inline-block;
+                }
+
+                .pb-2 a:hover,
+                .pb-3 a:hover {
+                    border-bottom:1px solid rgba(255,255,255,0);
+                    opacity:0.5;
+                }
+            }
+
+            @media all and (max-width: 720px) {
+
+                #bottom {
+                    width:360px;
+                    padding:40px 0 40px 0;
+                    margin:0 auto;
+                    position:relative;
+                    text-align:center;
+                    z-index:5;
+                }
+            }
+
+/* noone */
+
+        .noone {
+            width:0;
+            height:0;
+            overflow:hidden;
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:0;
+        }
+
+/* wrapper */
+
+        .wrapper {
+            display:none;
+            position:fixed;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            background:rgba(9,96,76,0.8);
+            z-index:100;
+        }
+
+/* close */
+
+        .close {
+            width:40px;
+            height:40px;
+            overflow:hidden;
+            float:right;
+            padding:0;
+            margin:0;
+            cursor:pointer;
+            outline:none;
+            background:url('../images/close.svg') no-repeat center center #131514;
+            position:absolute;
+            top:-20px;
+            right:-20px;
+            z-index:207;
+            border-radius:100%;
+            -webkit-border-radius:100%;
+            -moz-border-radius:100%;
+            -khtml-border-radius:100%;
+        }
+
+        .close:hover {
+            background:url('../images/close.svg') no-repeat center center #0b7159;
+        }
+
+        .close:hover, .close:not(:hover) {
+            -webkit-transition: All 0.2s ease;
+            -moz-transition: All 0.2s ease;
+            -o-transition: All 0.2s ease;
+            -ms-transition: All 0.2s ease;
+            transition: All 0.2s ease;
+        }
+
+            @media all and (max-width: 720px) {
+                .close {
+                    width:40px;
+                    height:40px;
+                    overflow:hidden;
+                    float:right;
+                    padding:0;
+                    margin:0;
+                    cursor:pointer;
+                    outline:none;
+                    background:url('../images/close.svg') no-repeat center center #131514;
+                    position:absolute;
+                    top:0;
+                    right:0;
+                    z-index:207;
+                    border-top-right-radius:0;
+                    -webkit-border-top-right-radius:0;
+                    -moz-border-top-right-radius:0;
+                    -khtml-border-top-right-radius:0;
+                    border-top-left-radius:0;
+                    -webkit-border-top-left-radius:0;
+                    -moz-border-top-left-radius:0;
+                    -khtml-border-top-left-radius:0;
+                    border-bottom-right-radius:0;
+                    -webkit-border-bottom-right-radius:0;
+                    -moz-border-bottom-right-radius:0;
+                    -khtml-border-bottom-right-radius:0;
+                    border-bottom-left-radius:10px;
+                    -webkit-border-bottom-left-radius:10px;
+                    -moz-border-bottom-left-radius:10px;
+                    -khtml-border-bottom-left-radius:10px;
+                }
+            }
+
+/* thnx */
+
+        .thnx {
+            display:none;
+            width:360px;
+            padding:70px 50px 60px 50px;
+            margin:0;
+            position:fixed;
+            top:calc(50% - 100px);
+            left:calc(50% - 230px);
+            z-index:106;
+            background:#ffffff;
+            text-align:center;
+            border-radius:10px;
+            -webkit-border-radius:10px;
+            -moz-border-radius:10px;
+            -khtml-border-radius:10px;
+        }
+
+        .thnx h2 {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:center;
+            font-size:16px;
+            line-height:30px;
+            padding:0;
+            margin:0;
+            color:#131514;
+            cursor:default;
+        }
+
+        .thnx h2 span {
+            font-family: "OPPOSANS-U";
+            font-weight:normal;
+            font-style:normal;
+            text-align:center;
+            font-size:30px;
+            line-height:30px;
+            padding:0;
+            margin:0 0 15px 0;
+            color:#131514;
+            cursor:default;
+            display:inline-block;
+        }
+
+            @media all and (max-width: 1200px) {
+
+            }
+
+            @media all and (max-width: 1020px) {
+
+            }
+
+            @media all and (max-width: 720px) {
+                .thnx {
+                    display:none;
+                    width:360px;
+                    height:calc(100% - 130px);
+                    padding:70px calc(50% - 180px) 60px calc(50% - 180px);
+                    margin:0;
+                    position:fixed;
+                    top:0;
+                    left:0;
+                    z-index:106;
+                    background:#ffffff;
+                    text-align:center;
+                    border-radius:0;
+                    -webkit-border-radius:0;
+                    -moz-border-radius:0;
+                    -khtml-border-radius:0;
+                }
+            }
+
+/* z-2 */
+
+        .z-box-2 {
+            display:none;
+            width:520px;
+            padding:50px 45px 50px 45px;
+            margin:0 0 50px 0;
+            position:fixed;
+            left:calc(50% - 305px);
+            top:calc(50% - 270px);
+            z-index:106;
+            background:#ffffff;
+            border-radius:10px;
+            -webkit-border-radius:10px;
+            -moz-border-radius:10px;
+            -khtml-border-radius:10px;
+        }
+
+        .z-box-2 h2 {
+            font-family: "OPPOSANS-U";
+            font-weight:normal;
+            font-style:normal;
+            text-align:center;
+            font-size:24px;
+            line-height:30px;
+            padding:0;
+            margin:0 auto;
+            color:#131514;
+            cursor:default;
+        }
+
+        .z-logos {
+            width:100%;
+            padding:0;
+            margin:40px auto 0 auto;
+            position:relative;
+            text-align:center;
+        }
+
+        .z-logos a {
+            height:80px;
+            padding:0;
+            display:inline-block;
+            cursor:pointer;
+            -moz-box-shadow: 0 5px 30px 0 rgba(28,29,34,0.1);
+            -webkit-box-shadow: 0 5px 30px 0 rgba(28,29,34,0.1);
+            box-shadow: 0 5px 30px 0 rgba(28,29,34,0.1);
+            border-radius:10px;
+            -webkit-border-radius:10px;
+            -moz-border-radius:10px;
+            -khtml-border-radius:10px;
+        }
+
+        .z-logos a.logo-1 { margin:10px 5px 0 5px; width:150px; background:url('../images/l1.png') no-repeat center center #ffffff; }
+        .z-logos a.logo-2 { margin:10px 5px 0 5px; width:190px; background:url('../images/l2.png') no-repeat center center #ffffff; }
+        .z-logos a.logo-3 { margin:10px 5px 0 5px; width:200px; background:url('../images/l3.png') no-repeat center center #ffffff; }
+        .z-logos a.logo-4 { margin:10px 5px 0 5px; width:220px; background:url('../images/l4.png') no-repeat center center #ffffff; }
+        .z-logos a.logo-5 { margin:10px 5px 0 5px; width:230px; background:url('../images/l5.png') no-repeat center center #ffffff; }
+        .z-logos a.logo-6 { margin:10px 5px 0 5px; width:200px; background:url('../images/l6.png') no-repeat center center #ffffff; }
+        .z-logos a.logo-7 { margin:10px 5px 0 5px; width:185px; background:url('../images/l7.png') no-repeat center center #ffffff; }
+        .z-logos a.logo-8 { margin:10px 5px 0 5px; width:130px; background:url('../images/l8.png') no-repeat center center #ffffff; }
+
+        .z-logos a:hover {
+            -moz-box-shadow: 0 5px 30px 0 rgba(28,29,34,0);
+            -webkit-box-shadow: 0 5px 30px 0 rgba(28,29,34,0);
+            box-shadow: 0 5px 30px 0 rgba(28,29,34,0);
+        }
+
+            @media all and (max-width: 720px) {
+                .z-box-2 {
+                    display:none;
+                    width:360px;
+                    min-height:calc(100% - 100px);
+                    overflow:auto;
+                    padding:50px calc(50% - 180px) 50px calc(50% - 180px);
+                    margin:0;
+                    position:fixed;
+                    left:0;
+                    top:0;
+                    z-index:106;
+                    background:#ffffff;
+                    border-radius:0;
+                    -webkit-border-radius:0;
+                    -moz-border-radius:0;
+                    -khtml-border-radius:0;
+                }
+
+                .z-box-2 h2 {
+                    font-family: "OPPOSANS-U";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:18px;
+                    line-height:26px;
+                    padding:0;
+                    margin:0 auto;
+                    color:#131514;
+                    cursor:default;
+                }
+
+
+                .z-logos a {
+                    height:60px;
+                    padding:0;
+                    display:inline-block;
+                    float:left;
+                    cursor:pointer;
+                    -moz-box-shadow: 0 5px 30px 0 rgba(28,29,34,0.1);
+                    -webkit-box-shadow: 0 5px 30px 0 rgba(28,29,34,0.1);
+                    box-shadow: 0 5px 30px 0 rgba(28,29,34,0.1);
+                    border-radius:10px;
+                    -webkit-border-radius:10px;
+                    -moz-border-radius:10px;
+                    -khtml-border-radius:10px;
+                }
+
+                .z-logos a.logo-1 { margin:10px 5px 0 45px; width:110px; background:url('../images/l1.png') no-repeat center center #ffffff; }
+                .z-logos a.logo-2 { margin:10px 5px 0 5px; width:150px; background:url('../images/l2.png') no-repeat center center #ffffff; }
+                .z-logos a.logo-3 { margin:10px 5px 0 5px; width:160px; background:url('../images/l3.png') no-repeat center center #ffffff; }
+                .z-logos a.logo-4 { margin:10px 5px 0 5px; width:180px; background:url('../images/l4.png') no-repeat center center #ffffff; }
+                .z-logos a.logo-5 { margin:10px 5px 0 5px; width:190px; background:url('../images/l5.png') no-repeat center center #ffffff; }
+                .z-logos a.logo-6 { margin:10px 5px 0 5px; width:150px; background:url('../images/l6.png') no-repeat center center #ffffff; }
+                .z-logos a.logo-7 { margin:10px 5px 0 60px; width:140px; background:url('../images/l7.png') no-repeat center center #ffffff; }
+                .z-logos a.logo-8 { margin:10px 5px 0 5px; width:90px; background:url('../images/l8.png') no-repeat center center #ffffff; }
+            }
+
+/* z */
+
+        .z-box-w {
+            display:none;
+            width:100%;
+            height:100%;
+            overflow-y: auto;
+            padding:0;
+            margin:0;
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:106;
+        }
+
+        .z-box-w::-webkit-scrollbar {width:0; height:0;}
+        .z-box-w::-webkit-scrollbar-button {width:0; height:0; background:#ffffff; }
+        .z-box-w::-webkit-scrollbar-track {background:#ffffff;}
+        .z-box-w::-webkit-scrollbar-track-piece {background:#ffffff;}
+        .z-box-w::-webkit-scrollbar-thumb {height:5px; background:#0b7159;}
+        .z-box-w::-webkit-scrollbar-corner {background:#ffffff;}
+        .z-box-w::-webkit-resizer {background:#ffffff;}
+
+        .wrapper-2 {
+            position:fixed;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            background:rgba(9,96,76,0.8);
+            z-index:100;
+        }
+
+        .z-box {
+            width:520px;
+            padding:50px 45px 50px 45px;
+            margin:0 0 50px 0;
+            position:absolute;
+            left:calc(50% - 305px);
+            top:50px;
+            z-index:106;
+            background:#ffffff;
+            border-radius:10px;
+            -webkit-border-radius:10px;
+            -moz-border-radius:10px;
+            -khtml-border-radius:10px;
+        }
+
+        .formbox {
+            width:100%;
+            margin:0 auto;
+            padding:0;
+            text-align:center;
+            position:relative;
+        }
+
+        .formbox p {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:center;
+            letter-spacing:3px;
+            text-transform:uppercase;
+            font-size:12px;
+            line-height:50px;
+            width:calc(100% - 10px);
+            height:50px;
+            padding:0;
+            margin:0 5px 10px 5px;
+            color:#ffffff;
+            background:#0b7159;
+            border-radius:10px;
+            -webkit-border-radius:10px;
+            -moz-border-radius:10px;
+            -khtml-border-radius:10px;
+            cursor:default;
+            float:left;
+            display:none;
+        }
+
+        .sert {
+            display:none;
+        }
+
+        .formbox select {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-size:14px;
+            line-height:20px;
+            text-indent:0;
+            text-align:left;
+            height:50px;
+            padding:15px 20px 15px 20px;
+            border:none;
+            margin:0 5px 10px 5px;
+            float:left;
+            color:rgba(19,21,20,0.5);
+            outline:none;
+            -webkit-appearance: none;
+            -moz-appearance:none;
+            border-radius:10px;
+            -webkit-border-radius:10px;
+            -moz-border-radius:10px;
+            -khtml-border-radius:10px;
+            background:url('../images/arrow.svg') no-repeat calc(100% - 20px) 22px #f5f5f5;
+        }
+
+        .formbox select.select-1 { width:calc(50% - 10px); }
+        .formbox select.select-2 { width:calc(100% - 10px); }
+
+        .formbox input {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-size:14px;
+            line-height:20px;
+            text-indent:0;
+            text-align:left;
+            height:20px;
+            padding:15px 20px 15px 20px;
+            border:none;
+            margin:0 5px 10px 5px;
+            float:left;
+            color:#131514;
+            outline:none;
+            -webkit-appearance: none;
+            -moz-appearance:none;
+            border-radius:10px;
+            -webkit-border-radius:10px;
+            -moz-border-radius:10px;
+            -khtml-border-radius:10px;
+            background:#f5f5f5;
+        }
+
+        .formbox input.inp1 { width:calc(50% - 50px); }
+        .formbox input.inp2 { width:calc(100% - 50px); }
+
+        .formbox input:-moz-placeholder {color:rgba(19,21,20,0.5);  }
+        .formbox input::-webkit-input-placeholder {  color:rgba(19,21,20,0.5);  }
+
+        .formbox input.error:-moz-placeholder {  color:#db264c;  }
+        .formbox input.error::-webkit-input-placeholder {  color:#db264c;  }
+        .formbox input.error {  color:#db264c;  border-color:#db264c;  }
+
+        input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+        input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+        input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+        input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+        input:focus::-webkit-input-placeholder {opacity: 0.3; transition: opacity 0.3s ease;}
+        input:focus::-moz-placeholder          {opacity: 0.3; transition: opacity 0.3s ease;}
+        input:focus:-moz-placeholder           {opacity: 0.3; transition: opacity 0.3s ease;}
+        input:focus:-ms-input-placeholder      {opacity: 0.3; transition: opacity 0.3s ease;}
+
+        #filesel {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:14px;
+            line-height:50px;
+            width:65px;
+            height:50px;
+            padding:0 0 0 55px;
+            margin:0;
+            float:left;
+            outline:none;
+            cursor:pointer;
+            color:#ffffff;
+            position:relative;
+            background:url('../images/search.svg') no-repeat 20px center #0b7159;
+            border-top-right-radius:10px;
+            -webkit-border-top-right-radius:10px;
+            -moz-border-top-right-radius:10px;
+            -khtml-border-top-right-radius:10px;
+            border-top-left-radius:0;
+            -webkit-border-top-left-radius:0;
+            -moz-border-top-left-radius:0;
+            -khtml-border-top-left-radius:0;
+            border-bottom-right-radius:10px;
+            -webkit-border-bottom-right-radius:10px;
+            -moz-border-bottom-right-radius:10px;
+            -khtml-border-bottom-right-radius:10px;
+            border-bottom-left-radius:0;
+            -webkit-border-bottom-left-radius:0;
+            -moz-border-bottom-left-radius:0;
+            -khtml-border-bottom-left-radius:0;
+        }
+
+        #filesel:hover {
+            background:url('../images/search.svg') no-repeat 20px center #131514;
+        }
+
+        #filesel:hover, #filesel:not(:hover) {
+            -webkit-transition: All 0.2s ease;
+            -moz-transition: All 0.2s ease;
+            -o-transition: All 0.2s ease;
+            -ms-transition: All 0.2s ease;
+            transition: All 0.2s ease;
+        }
+
+        .spacing {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:14px;
+            line-height:50px;
+            width:calc(100% - 210px);
+            height:50px;
+            background:#f5f5f5;
+            padding:0 60px 0 20px;
+            margin:0 0 0 5px;
+            position:relative;
+            cursor:default;
+            color:rgba(19,21,20,0.5);
+            float:left;
+            border-top-right-radius:0;
+            -webkit-border-top-right-radius:0;
+            -moz-border-top-right-radius:0;
+            -khtml-border-top-right-radius:0;
+            border-top-left-radius:10px;
+            -webkit-border-top-left-radius:10px;
+            -moz-border-top-left-radius:10px;
+            -khtml-border-top-left-radius:10px;
+            border-bottom-right-radius:0;
+            -webkit-border-bottom-right-radius:0;
+            -moz-border-bottom-right-radius:0;
+            -khtml-border-bottom-right-radius:0;
+            border-bottom-left-radius:10px;
+            -webkit-border-bottom-left-radius:10px;
+            -moz-border-bottom-left-radius:10px;
+            -khtml-border-bottom-left-radius:10px;
+        }
+
+        .fileElem {
+            width:0;
+            height:0;
+            padding:0;
+            margin:0;
+            visibility:hidden;
+            display:none;
+        }
+
+        .MultiFile-wrap {
+            display:flex;
+        }
+
+        .formbox h6 {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:center;
+            font-size:12px;
+            line-height:16px;
+            padding:0;
+            margin:20px auto 0 auto;
+            color:#131514;
+            cursor:default;
+            display:block;
+        }
+
+        .formbox .submit {
+            width:240px;
+            padding:0;
+            margin:20px auto 0 auto;
+            border:none;
+            outline:none;
+            background:none;
+        }
+
+        .formbox .submit input {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:center;
+            font-size:14px;
+            line-height:44px;
+            width:100%;
+            height:50px;
+            padding:0;
+            margin:0;
+            outline:none;
+            cursor:pointer;
+            -webkit-appearance: none;
+            -moz-appearance:none;
+            color:#ffffff;
+            background:#0b7159;
+            border:none;
+            border-radius:30px;
+            -webkit-border-radius:30px;
+            -moz-border-radius:30px;
+            -khtml-border-radius:30px;
+            -moz-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+            -webkit-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+            box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+        }
+
+        .formbox .submit input:hover {
+            background:#131514;
+            -moz-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+            -webkit-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+            box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+            outline:none;
+        }
+
+        .formbox .submit input:hover, .formbox .submit input:not(:hover) {
+            -webkit-transition: All 0.2s ease;
+            -moz-transition: All 0.2s ease;
+            -o-transition: All 0.2s ease;
+            -ms-transition: All 0.2s ease;
+            transition: All 0.2s ease;
+        }
+
+        .checkbox {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:12px;
+            line-height:18px;
+            padding:0 0 0 25px;
+            margin:20px auto 0 auto;
+            color:#131514;
+            cursor:pointer;
+            position:relative;
+            display:inline-block;
+        }
+
+        .checkbox input[type=checkbox] {
+            display:none;
+        }
+
+        .checkbox label {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:12px;
+            line-height:18px;
+            padding:0;
+            margin:0;
+            color:#131514;
+            cursor:pointer;
+            position:relative;
+        }
+
+        .checkbox label a {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:12px;
+            line-height:16px;
+            padding:0;
+            margin:0;
+            color:#131514;
+            cursor:pointer;
+            position:relative;
+        }
+
+        .checkbox label a span {
+            font-family: "OPPOSANS-M";
+            font-weight:normal;
+            font-style:normal;
+            text-align:left;
+            font-size:12px;
+            line-height:16px;
+            display: inline-block;
+            padding:0;
+            margin:0;
+            color:#131514;
+            cursor:pointer;
+            border-bottom:1px solid #131415;
+            position:relative;
+        }
+
+        .checkbox label a:hover span {
+            color:#0b7159;
+            border-bottom:1px solid rgba(0,0,0,0);
+        }
+        .checkbox label a:hover span, .checkbox label a:not(:hover) span {
+            -webkit-transition: All 0.2s ease;
+            -moz-transition: All 0.2s ease;
+            -o-transition: All 0.2s ease;
+            -ms-transition: All 0.2s ease;
+            transition: All 0.2s ease;
+        }
+
+        .checkbox label:after {
+            content:'';
+            display:block;
+            outline:none;
+            width:16px;
+            height:16px;
+            border:none;
+            position:absolute;
+            left:-25px;
+            top:4px;
+            background:url('../images/border.svg') no-repeat 0 0;
+            z-index:11;
+            margin:0;
+            cursor:pointer;
+        }
+
+        .checkbox input[type=checkbox]:checked + label:after {
+            background:url('../images/active-check.svg') no-repeat 0 0;
+        }
+
+            @media all and (max-width: 1200px) {
+
+            }
+
+            @media all and (max-width: 1020px) {
+
+            }
+
+            @media all and (max-width: 720px) {
+
+                .z-box {
+                    width:360px;
+                    padding:50px calc(50% - 180px);
+                    margin:0;
+                    position:absolute;
+                    left:0;
+                    top:0;
+                    z-index:106;
+                    background:#ffffff;
+                    border-radius:0;
+                    -webkit-border-radius:0;
+                    -moz-border-radius:0;
+                    -khtml-border-radius:0;
+                }
+
+                .formbox {
+                    width:100%;
+                    margin:0 auto;
+                    padding:0;
+                    text-align:center;
+                    position:relative;
+                }
+
+                .formbox p {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    letter-spacing:1px;
+                    text-transform:uppercase;
+                    font-size:12px;
+                    line-height:50px;
+                    width:calc(100% - 10px);
+                    height:50px;
+                    padding:0;
+                    margin:0 5px 10px 5px;
+                    color:#ffffff;
+                    background:#0b7159;
+                    border-radius:10px;
+                    -webkit-border-radius:10px;
+                    -moz-border-radius:10px;
+                    -khtml-border-radius:10px;
+                    cursor:default;
+                    float:left;
+                    display:none;
+                }
+
+                .sert {
+                    display:none;
+                }
+
+                .formbox select {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-size:14px;
+                    line-height:20px;
+                    text-indent:0;
+                    text-align:left;
+                    height:50px;
+                    padding:15px 20px 15px 20px;
+                    border:none;
+                    margin:0 5px 10px 5px;
+                    float:left;
+                    color:rgba(19,21,20,0.5);
+                    outline:none;
+                    -webkit-appearance: none;
+                    -moz-appearance:none;
+                    border-radius:10px;
+                    -webkit-border-radius:10px;
+                    -moz-border-radius:10px;
+                    -khtml-border-radius:10px;
+                    background:url('../images/arrow.svg') no-repeat calc(100% - 20px) 22px #f5f5f5;
+                }
+
+                .formbox select.select-1 { width:calc(100% - 10px); }
+                .formbox select.select-2 { width:calc(100% - 10px); }
+
+                .formbox input {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-size:14px;
+                    line-height:20px;
+                    text-indent:0;
+                    text-align:left;
+                    height:20px;
+                    padding:15px 20px 15px 20px;
+                    border:none;
+                    margin:0 5px 10px 5px;
+                    float:left;
+                    color:#131514;
+                    outline:none;
+                    -webkit-appearance: none;
+                    -moz-appearance:none;
+                    border-radius:10px;
+                    -webkit-border-radius:10px;
+                    -moz-border-radius:10px;
+                    -khtml-border-radius:10px;
+                    background:#f5f5f5;
+                }
+
+                .formbox input.inp1 { width:calc(100% - 50px); }
+                .formbox input.inp2 { width:calc(100% - 50px); }
+
+                .formbox input:-moz-placeholder {color:rgba(19,21,20,0.5);  }
+                .formbox input::-webkit-input-placeholder {  color:rgba(19,21,20,0.5);  }
+
+                .formbox input.error:-moz-placeholder {  color:#db264c;  }
+                .formbox input.error::-webkit-input-placeholder {  color:#db264c;  }
+                .formbox input.error {  color:#db264c;  border-color:#db264c;  }
+
+                input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+                input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+                input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+                input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+                input:focus::-webkit-input-placeholder {opacity: 0.3; transition: opacity 0.3s ease;}
+                input:focus::-moz-placeholder          {opacity: 0.3; transition: opacity 0.3s ease;}
+                input:focus:-moz-placeholder           {opacity: 0.3; transition: opacity 0.3s ease;}
+                input:focus:-ms-input-placeholder      {opacity: 0.3; transition: opacity 0.3s ease;}
+
+                #filesel {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:14px;
+                    line-height:50px;
+                    width:65px;
+                    height:50px;
+                    padding:0 0 0 55px;
+                    margin:0;
+                    float:left;
+                    outline:none;
+                    cursor:pointer;
+                    color:#ffffff;
+                    position:relative;
+                    background:url('../images/search.svg') no-repeat 20px center #0b7159;
+                    border-top-right-radius:10px;
+                    -webkit-border-top-right-radius:10px;
+                    -moz-border-top-right-radius:10px;
+                    -khtml-border-top-right-radius:10px;
+                    border-top-left-radius:0;
+                    -webkit-border-top-left-radius:0;
+                    -moz-border-top-left-radius:0;
+                    -khtml-border-top-left-radius:0;
+                    border-bottom-right-radius:10px;
+                    -webkit-border-bottom-right-radius:10px;
+                    -moz-border-bottom-right-radius:10px;
+                    -khtml-border-bottom-right-radius:10px;
+                    border-bottom-left-radius:0;
+                    -webkit-border-bottom-left-radius:0;
+                    -moz-border-bottom-left-radius:0;
+                    -khtml-border-bottom-left-radius:0;
+                }
+
+                #filesel:hover {
+                    background:url('../images/search.svg') no-repeat 20px center #131514;
+                }
+
+                #filesel:hover, #filesel:not(:hover) {
+                    -webkit-transition: All 0.2s ease;
+                    -moz-transition: All 0.2s ease;
+                    -o-transition: All 0.2s ease;
+                    -ms-transition: All 0.2s ease;
+                    transition: All 0.2s ease;
+                }
+
+                .spacing {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:14px;
+                    line-height:50px;
+                    width:calc(100% - 210px);
+                    height:50px;
+                    background:#f5f5f5;
+                    padding:0 60px 0 20px;
+                    margin:0 0 0 5px;
+                    position:relative;
+                    cursor:default;
+                    color:rgba(19,21,20,0.5);
+                    float:left;
+                    border-top-right-radius:0;
+                    -webkit-border-top-right-radius:0;
+                    -moz-border-top-right-radius:0;
+                    -khtml-border-top-right-radius:0;
+                    border-top-left-radius:10px;
+                    -webkit-border-top-left-radius:10px;
+                    -moz-border-top-left-radius:10px;
+                    -khtml-border-top-left-radius:10px;
+                    border-bottom-right-radius:0;
+                    -webkit-border-bottom-right-radius:0;
+                    -moz-border-bottom-right-radius:0;
+                    -khtml-border-bottom-right-radius:0;
+                    border-bottom-left-radius:10px;
+                    -webkit-border-bottom-left-radius:10px;
+                    -moz-border-bottom-left-radius:10px;
+                    -khtml-border-bottom-left-radius:10px;
+                }
+
+                .fileElem {
+                    width:0;
+                    height:0;
+                    padding:0;
+                    margin:0;
+                    visibility:hidden;
+                    display:none;
+                }
+
+                .MultiFile-wrap {
+                    display:flex;
+                }
+
+                .formbox h6 {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:12px;
+                    line-height:16px;
+                    padding:0;
+                    margin:20px auto 0 auto;
+                    color:#131514;
+                    cursor:default;
+                    display:block;
+                }
+
+                .formbox .submit {
+                    width:240px;
+                    padding:0;
+                    margin:20px auto 0 auto;
+                    border:none;
+                    outline:none;
+                    background:none;
+                }
+
+                .formbox .submit input {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:center;
+                    font-size:14px;
+                    line-height:44px;
+                    width:100%;
+                    height:50px;
+                    padding:0;
+                    margin:0;
+                    outline:none;
+                    cursor:pointer;
+                    -webkit-appearance: none;
+                    -moz-appearance:none;
+                    color:#ffffff;
+                    background:#0b7159;
+                    border:none;
+                    border-radius:30px;
+                    -webkit-border-radius:30px;
+                    -moz-border-radius:30px;
+                    -khtml-border-radius:30px;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                    box-shadow: 0 15px 30px 0 rgba(11,113,89,0.3);
+                }
+
+                .formbox .submit input:hover {
+                    background:#131514;
+                    -moz-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    -webkit-box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    box-shadow: 0 15px 30px 0 rgba(19,21,20,0.3);
+                    outline:none;
+                }
+
+                .formbox .submit input:hover, .formbox .submit input:not(:hover) {
+                    -webkit-transition: All 0.2s ease;
+                    -moz-transition: All 0.2s ease;
+                    -o-transition: All 0.2s ease;
+                    -ms-transition: All 0.2s ease;
+                    transition: All 0.2s ease;
+                }
+
+                .checkbox {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:12px;
+                    line-height:18px;
+                    padding:0 0 0 25px;
+                    margin:20px 0 0 50px;
+                    color:#131514;
+                    cursor:pointer;
+                    position:relative;
+                }
+
+                .checkbox br {
+                    display:none;
+                }
+
+                .checkbox input[type=checkbox] {
+                    display:none;
+                }
+
+                .checkbox label {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:12px;
+                    line-height:18px;
+                    padding:0;
+                    margin:0;
+                    color:#131514;
+                    cursor:pointer;
+                    position:relative;
+                }
+
+                .checkbox label a {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:12px;
+                    line-height:16px;
+                    padding:0;
+                    margin:0;
+                    color:#131514;
+                    cursor:pointer;
+                    position:relative;
+                }
+
+                .checkbox label a span {
+                    font-family: "OPPOSANS-M";
+                    font-weight:normal;
+                    font-style:normal;
+                    text-align:left;
+                    font-size:12px;
+                    line-height:16px;
+                    display:inline-block;
+                    padding:0;
+                    margin:0;
+                    color:#131514;
+                    cursor:pointer;
+                    border-bottom:1px solid #131415;
+                    position:relative;
+                }
+
+                .checkbox label a:hover span {
+                    color:#0b7159;
+                    border-bottom:1px solid rgba(0,0,0,0);
+                }
+                .checkbox label a:hover span, .checkbox label a:not(:hover) span {
+                    -webkit-transition: All 0.2s ease;
+                    -moz-transition: All 0.2s ease;
+                    -o-transition: All 0.2s ease;
+                    -ms-transition: All 0.2s ease;
+                    transition: All 0.2s ease;
+                }
+
+                .checkbox label:after {
+                    content:'';
+                    display:block;
+                    outline:none;
+                    width:16px;
+                    height:16px;
+                    border:none;
+                    position:absolute;
+                    left:-25px;
+                    top:4px;
+                    background:url('../images/border.svg') no-repeat 0 0;
+                    z-index:11;
+                    margin:0;
+                    cursor:pointer;
+                }
+
+                .checkbox input[type=checkbox]:checked + label:after {
+                    background:url('../images/active-check.svg') no-repeat 0 0;
+                }
+            }
+
+        input.fn {  display:none;  }
+
+/* animation standart */
+
+        .animated {
+            -webkit-animation-duration: .95s;
+            animation-duration: .95s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        @-webkit-keyframes fadeInUp {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 30%, 0);
+                transform: translate3d(0, 30%, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 30%, 0);
+                transform: translate3d(0, 30%, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        .fadeInUp {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+
+
+        @-webkit-keyframes fadeInDown {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -30%, 0);
+                transform: translate3d(0, -30%, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -30%, 0);
+                transform: translate3d(0, -30%, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        .fadeInDown {
+            -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+        }
+
+        @-webkit-keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(-30%, 0, 0);
+                transform: translate3d(-30%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(-30%, 0, 0);
+                transform: translate3d(-30%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        .fadeInLeft {
+            -webkit-animation-name: fadeInLeft;
+            animation-name: fadeInLeft;
+        }
+
+        @-webkit-keyframes fadeInRight {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(30%, 0, 0);
+                transform: translate3d(30%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(30%, 0, 0);
+                transform: translate3d(30%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        .fadeInRight {
+            -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;
+        }
+
+        @-webkit-keyframes fadeOutDown {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 30%, 0);
+                transform: translate3d(0, 30%, 0);
+            }
+        }
+
+        @keyframes fadeOutDown {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 30%, 0);
+                transform: translate3d(0, 30%, 0);
+            }
+        }
+
+        .fadeOutDown {
+            -webkit-animation-name: fadeOutDown;
+            animation-name: fadeOutDown;
+        }
+
+        @-webkit-keyframes fadeOutUp {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -30%, 0);
+                transform: translate3d(0, -30%, 0);
+            }
+        }
+
+        @keyframes fadeOutUp {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -30%, 0);
+                transform: translate3d(0, -30%, 0);
+            }
+        }
+
+        .fadeOutUp {
+            -webkit-animation-name: fadeOutUp;
+            animation-name: fadeOutUp;
+        }
+
+        @-webkit-keyframes fadeOutLeft {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+                -webkit-transform: translate3d(-30%, 0, 0);
+                transform: translate3d(-30%, 0, 0);
+            }
+        }
+
+        @keyframes fadeOutLeft {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+                -webkit-transform: translate3d(-30%, 0, 0);
+                transform: translate3d(-30%, 0, 0);
+            }
+        }
+
+        .fadeOutLeft {
+            -webkit-animation-name: fadeOutLeft;
+            animation-name: fadeOutLeft;
+        }
+
+        @-webkit-keyframes fadeOutRight {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+                -webkit-transform: translate3d(30%, 0, 0);
+                transform: translate3d(30%, 0, 0);
+            }
+        }
+
+        @keyframes fadeOutRight {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+                -webkit-transform: translate3d(30%, 0, 0);
+                transform: translate3d(30%, 0, 0);
+            }
+        }
+
+        .fadeOutRight {
+            -webkit-animation-name: fadeOutRight;
+            animation-name: fadeOutRight;
+        }
+
+/* animation */
+
+        .ani-1 {  visibility: hidden;  }
+        .ani-2 {  visibility: hidden;  }
+
+        .fadeInUp {  visibility: visible;  }
+        .fadeInDown {  visibility: visible;  }
+        .fadeInRight {  visibility: visible;  }
+        .fadeInLeft {  visibility: visible;  }
+
+        .d25s {
+            -webkit-animation-delay: .25s;
+            -moz-animation-delay: .25s;
+            animation-delay: .25s;
+        }
+
+        .d50s {
+            -webkit-animation-delay: .5s;
+            -moz-animation-delay: .5s;
+            animation-delay: .5s;
+        }
+
+        .d75s {
+            -webkit-animation-delay: .75s;
+            -moz-animation-delay: .75s;
+            animation-delay: .75s;
+        }
+
+        .d100s {
+            -webkit-animation-delay: 1s;
+            -moz-animation-delay: 1s;
+            animation-delay: 1s;
+        }
+
+        .d125s {
+            -webkit-animation-delay: 1.25s;
+            -moz-animation-delay: 1.25s;
+            animation-delay: 1.25s;
+        }
+
+        .d150s {
+            -webkit-animation-delay: 1.5s;
+            -moz-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+        }
+
+        .d175s {
+            -webkit-animation-delay: 1.75s;
+            -moz-animation-delay: 1.75s;
+            animation-delay: 1.75s;
+        }
+
+        .d200s {
+            -webkit-animation-delay: 2s;
+            -moz-animation-delay: 2s;
+            animation-delay: 2s;
+        }
+
+            @media all and (max-width: 1020px) {
+                .d25s,
+                .d50s,
+                .d75s,
+                .d100s,
+                .d125s,
+                .d150s,
+                .d175s,
+                .d200s {
+                    -webkit-animation-delay: 0s;
+                    -moz-animation-delay: 0s;
+                    animation-delay: 0s;
+                }
+            }
+
+/* end */
