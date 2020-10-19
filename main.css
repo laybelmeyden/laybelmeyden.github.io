@@ -52,6 +52,10 @@ h1 {
     background: black;
 }
 
+.figure-caption h2 {
+    text-transform: uppercase;
+}
+
 .glitch::before {
     left: 2px;
     text-shadow: -2px 0 #49FC00;
