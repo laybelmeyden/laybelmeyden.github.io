@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <section id="suff_nav">
+        <div class="container">
+            <div class="row">
+                <div class="suff_nav">
+                    <div class="social_links">
+                        <a href=""><img src="img/Vector.svg" alt=""></a>
+                        <a href=""><img src="img/Union.svg" alt=""></a>
+                        <a href=""><img src="img/Frame.svg" alt=""></a>
+                        <a href=""><img src="img/Facebook.svg" alt=""></a>
+                        <p class="suff_nav_adress">603006, г. Н. Новгород, ул. Максима Горького, д. 147А</p>
+                        <p class="suff_nav_email">E-mail: <a href="mailto:info@nngproekt.ru">info@nngproekt.ru</a></p>
+                    </div>
+                    <div class="href_links">
+                        <a href="cariernngp.html" class="href_links_first_items">Карьера в ННГП</a>
+                        <a href="solve_task.html" class="href_links_first_seconds">Решить задачу</a>
+                        <div class="language">
+                            <a href="">Eng</a>
+                            <p>|</p>
+                            <a href="">Rus</a>
+                        </div>
+                        <a class="href_links_first_phone"><img src="img/phone.svg" alt="">+7 (831) 266-07-77</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="main_nav">
+        <div class="container">
+            <div class="row">
+                <div class="psevdo_container">
+                    <div class="logo">
+                        <a href="/"><img src="img/mainlogo.svg" alt=""></a>
+                        <p>«Нижегороднефтегазпроект»</p>
+                    </div>
+                    <div class="main_nav_links">
+                        <a href="company.html">Компания</a>
+                        <a href="services.html">Услуги</a>
+                        <a href="all_projects.html">Проекты</a>
+                        <a href="buy_services.html">Закупки услуг</a>
+                        <a href="news.html">Пресс-центр</a>
+                        <a href="contact.html" class="last">Контакты</a>
+                        <div id="main_nav_links_input" class="input-group non_active">
+                            <input type="text" class="form-control" placeholder="Поиск по сайту">
+                            <div class="input-group-append">
+                                <span class="aria_input input-group-text"><img src="img/search.svg" alt=""></span>
+                            </div>
+                        </div>
+                        <div class="close_search non_active" onclick="openSearch()"><img src="img/close_serach.svg" alt=""></div>
+                        <div id="main_search" class="search" onclick="openSearch()"></div>
+                    </div>
+                    <div class="flex_1399">
+                        <div class="sub_menu" onclick="submenu_open()">
+                            <div id="sub_menu_img" class="img_burger"></div>
+                            <img id="sub_menu_img_2" class="non_active" src="img/close_serach.svg" alt="">
+                            <p>Меню</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="hidden_sub_nav" class="non_active">
+        <div class="container_try">
+            <div class="row">
+                <div id="nav_hidden" class="scroll_container_hidden_nav">
+                    <div class="grid_container">
+                        <div class="grid_sub_links">
+                            <div>
+                                <a href="company.html" class="sub_nav_title">Компания</a>
+                                <a href="company.html#company_about" class="sub_nav_pretitle">Общая информация</a>
+                                <a href="company.html#history" class="sub_nav_pretitle">История</a>
+                                <a href="company.html#ruko" class="sub_nav_pretitle">Руководство</a>
+                                <a href="company.html#docs" class="sub_nav_pretitle">Документы</a>
+                                <a href="preimushestva.html" class="sub_nav_pretitle">Преимущества</a>
+                                <a href="cariernngp.html" class="sub_nav_pretitle">Карьера в ННГП</a>
+                                <a href="vacancii.html" class="sub_nav_pretitle">Вакансии</a>
+
+                            </div>
+                            <div>
+                                <a href="services.html" class="sub_nav_title">Услуги</a>
+                                <a href="services_invest_page.html" class="sub_nav_pretitle">Инвестиционное <br>обоснование проекта</a>
+                                <a href="services_injir_pades.html" class="sub_nav_pretitle">Инжиниринг</a>
+                                <a href="services_texnobro.html" class="sub_nav_pretitle">Технологический брокеринг</a>
+                                <a href="services_educations.html" class="sub_nav_pretitle">Научные исследования <br>и разработки</a>
+                                <a href="services_programm_new.html" class="sub_nav_pretitle">Разработка программного <br>обеспечения</a>
+                            </div>
+                            <div>
+                                <a href="buy_services.html" class="sub_nav_title_down">Закупки услуг</a>
+                                <a href="all_projects.html" class="sub_nav_title_down">Проекты</a>
+                                <a href="contact.html" class="sub_nav_title_down">Контакты</a>
+                            </div>
+                            <div>
+                                <a href="news.html" class="sub_nav_title_down down_lst">Пресс-центр</a>
+                                <a href="news.html" class="sub_nav_pretitle">Новости</a>
+                                <a href="photo.html" class="sub_nav_pretitle">Фото и видео</a>
+                                <a href="smi.html" class="sub_nav_pretitle">СМИ о нас</a>
+                                <a href="alerts.html" class="sub_nav_pretitle">Объявления</a>
+                            </div>
+                        </div>
+                        <div class="items__1199_on_new_alerts">
+                            <div class="items__1199_on_new_alerts__grid">
+                                <div class="nav_750_order">
+                                    <a href="cariernngp.html" class="href_links_first_items_1199">Карьера в ННГП</a>
+                                    <a href="solve_task.html" class="href_links_first_seconds_1199">Решить задачу</a>
+                                </div>
+                                <div class="href_link__items_1199">
+                                    <a href=""><img src="img/Vector.svg" alt=""></a>
+                                    <a href=""><img src="img/Union.svg" alt=""></a>
+                                    <a href=""><img src="img/Frame.svg" alt=""></a>
+                                    <a href=""><img src="img/Facebook.svg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="search_1199">
+                                <input type="text" class="form-control" placeholder="Поиск по сайту">
+                                <div class="input-group-append">
+                                    <span class="aria_input input-group-text"><img src="img/search.svg" alt=""></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="forms_hidden_menu">
+                            <p class="feddback_him">Напишите нам</p>
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Ваше имя*</label>
+                                    <input type="email" class="form-control forms_hidden_menu__inputs" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Организация*</label>
+                                    <input type="email" class="form-control forms_hidden_menu__inputs" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email*</label>
+                                    <input type="email" class="form-control forms_hidden_menu__inputs" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group undo_check">
+                                    <label for="exampleInputEmail1">Сообщение или вопрос*</label>
+                                    <input type="email" class="form-control forms_hidden_menu__inputs" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group form-check">
+                                    <label class="customcheck">
+                                    Нажимая на кнопку, я принимаю условия соглашения
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn_custom btn_form">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="coming_soon">
+        <div class="container_try">
+            <div class="row">
+                <div class="breadcams_coming_soon">
+                    <p class="breadcams_coming_soon_p_1">Главная страница</p>
+                    <img src="img/comming_arrow.svg" alt="">
+                    <p class="breadcams_coming_soon_p_1">Услуги</p>
+                    <img src="img/comming_arrow.svg" alt="">
+                    <p class="breadcams_coming_soon_p_2">Разработка программного обеспечения</p>
+                </div>
+                <p class="coming_soon_items_p1">Разработка программного обеспечения</p>
+            </div>
+        </div>
+    </section>
+    <section id="services_invest">
+        <div>
+            <button type="button" class="btn modal_1_btn mdl__company mdl__services" data-toggle="modal" data-target="#exampleModal">
+                Связаться с нами
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content mdl_content_form1">
+                    <div class="modal-header mdl_header_form1">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="img/plus_red.svg" alt=""></span>
+                        </button>
+                    </div>
+                    <div class="modal-body mdl_body_form1">
+                        <p class="modal_title">Напишите нам</p>
+                        <div class="input_grid_form1">
+                            <form action="">
+                                <div class="input_items_form1">
+                                    <label for="text_form1" class="label_text_form1">Организация*</label>
+                                    <input type="text" name="organizations_name" id="text_form1" class="input_form_1_style">
+                                </div>
+                                <div class="input_items_form1">
+                                    <label for="text_form1_1" class="label_text_form1">Email*</label>
+                                    <input type="email" name="organizations_email" id="text_form1_1" class="input_form_1_style">
+                                </div>
+                                <div class="input_items_form1">
+                                    <label for="text_form1_textarea" class="label_text_form1">Сообщение или вопрос*</label>
+                                    <textarea name="organizations_text" id="text_form1_textarea" class="input_form_1_style_text_area"></textarea>
+                                </div>
+                                <div class="input_items_form1">
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" id="inputGroupFile01" class="imgInp custom-file-input" aria-describedby="inputGroupFileAddon01">
+                                            <label class="custom-file-label" for="inputGroupFile01">Прикрепить файл / до 10 Mb</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group form-check">
+                                    <label class="customcheck">
+                                    Нажимая на кнопку, я принимаю условия соглашения
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn_custom btn_form_1">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container_try">
+            <div class="row">
+                <div class="all_services_items">
+                    <div class="sticky all_services_items_a">
+                        <div class="sticky_items all_services_items_a_items">
+                            <a href="services_invest_page.html" class="all_services_a">Инвестиционное обоснование проекта</a>
+                            <a href="services_injir_pades.html" class="all_services_a">Инжиниринг</a>
+                            <a href="services_injir_uprav_project.html" class="all_services_a_1">Управление проектированием и поставками</a>
+                            <a href="services_injir_complex_uprav.html" class="all_services_a_1">Комплексное управление проектами</a>
+                            <a href="services_injir_consult.html" class="all_services_a_1">Консультационные услуги управления проектами</a>
+                            <a href="services_texnobro.html" class="all_services_a all_services_a_2">Технологический брокеринг</a>
+                            <a href="services_educations.html" class="all_services_a">Научные исследования и разработки</a>
+                            <a href="services_programm_new.html" class="all_services_a all_services_a--active">Разработка программного обеспечения </a>
+                        </div>
+                    </div>
+                    <div class="all_services_items_img">
+                        <img src="img/services_programm.jpg" alt="">
+                        <p class="all_services_items_img_p1">Разработка программного обеспечения</p>
+                        <p class="all_services_items_img_p2">
+                            Проектирование строительства зданий и сооружений начинается с предпроектной проработки, это важный этап проектных работ. Предпроектная проработка заключается в разработке концепции здания и окружающей территории с учетом пожеланий заказчика и требований
+                            нормативных документов.
+                            <br><br> Основные цели выполнения предпроектной проработки - это градостроительное обоснование размещения объекта нового строительства или реконструкции существующего объекта, оценка возможности его размещения на данном участке
+                            строительства с учётом градостроительных, историко-культурных, социально-экономических, санитарно-гигиенических и экологических требований.
+                            <br><br> Предпроектная проработка включает разработку концепции генерального плана, концепции архитектурно-планировочных и конструктивных решений, определение предварительных технико-экономических показателей объекта строительства,
+                            основных параметров застройки, а также иные проработки, необходимость в которых выявляется в каждом конкретном случае, с учетом наличия градостроительного плана развития территории, в состав которой входит объект Заказчика.
+                            <br><br> Результаты предпроектной проработки потребуются для согласования места размещения объекта капитального строительства, получения технических условий.
+                            <br><br> Кроме этого, разработка предварительной концепции здания и окружающей территории - пожалуй, лучший, если не единственный способ заранее оценить и получить представление о проектируемом объекте, сформировать точные
+                            требования к дальнейшему проектированию. Этот этап особенно важен и позволяет избежать многих сложностей в ходе дальнейшего проектирования.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container_try">
+            <div class="row">
+                <div class="footer_container">
+                    <div class="footer_items_left">
+                        <div>
+                            <a href="tel:+7 (831) 266 07 77" class="footer_container_phone_items">
+                                <p><img src="img/phone_white.svg" alt="" class="phone_footer_on">+7 (831) 266 07 77</p>
+                            </a>
+                            <p class="footer_items_title">Юридический адрес:</p>
+                            <p class="footer_items_pretitle">603000, г. Нижний Новгород, <br>ул. Малая Ямская, д. 18, помещение П2, оф. 22</p>
+                        </div>
+                        <div>
+                            <p class="footer_items_title">Адрес офиса в г. Нижний Новгород: </p>
+                            <p class="footer_items_pretitle">603006, г. Нижний Новгород, ул. Максима Горького, д. 147А</p>
+                            <p class="footer_items_title">Адрес офиса в г. Ставрополь:</p>
+                            <p class="footer_items_pretitle">«Центр газохимических технологий, альтернативной энергетики и экологии» 355035, Российская Федерация, г. Ставрополь, ул. Маршала Жукова, д. 7 <br>Телефон: <a href="tel:+7 (865) 220 55 30">+7 (865) 220 55 30</a> </p>
+                        </div>
+                    </div>
+                    <div class="footer_grid">
+                        <div class="foote_links_precontainers">
+                            <a href="company.html" class="footer_links_title">КОМПАНИЯ</a>
+                            <a href="company.html#company_about" class="footer_links_pretitle">О компании</a>
+                            <a href="company.html#history" class="footer_links_pretitle">История</a>
+                            <a href="company.html#ruko" class="footer_links_pretitle">Руководство</a>
+                            <a href="company.html#docs" class="footer_links_pretitle">Документы</a>
+                            <a href="vacancii.html" class="footer_links_pretitle">Вакансии</a>
+                        </div>
+                        <div class="foote_links_precontainers uslu_footer">
+                            <a href="services.html" class="footer_links_title">УСЛУГИ</a>
+                            <a href="services_invest_page.html" class="footer_links_pretitle">Инвестиционное обоснование проекта</a>
+                            <a href="services_injir_pades.html" class="footer_links_pretitle">Инжиниринг</a>
+                            <a href="services_texnobro.html" class="footer_links_pretitle">Технологический брокеринг</a>
+                            <a href="services_educations.html" class="footer_links_pretitle">Научные исследования и разработки</a>
+                            <a href="services_programm_new.html" class="footer_links_pretitle">Разработка программного обеспечения</a>
+                        </div>
+                        <div class="foote_links_precontainers">
+                            <p class="footer_links_title">ИНФОРМАЦИЯ</p>
+                            <a href="buy_services.html" class="footer_links_pretitle">Закупки услуг</a>
+                            <a href="all_projects.html" class="footer_links_pretitle">Проекты</a>
+                            <a href="contact.html" class="footer_links_pretitle">Контакты</a>
+                        </div>
+                        <div class="foote_links_precontainers footer_last_items_links">
+                            <a href="news.html" class="footer_links_title">ПРЕСС-ЦЕНТР</a>
+                            <a href="news.html" class="footer_links_pretitle">Новости</a>
+                            <a href="photo.html" class="footer_links_pretitle">Фото и видео</a>
+                            <a href="smi.html" class="footer_links_pretitle">СМИ о нас</a>
+                            <a href="alerts.html" class="footer_links_pretitle">Объявления</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_container">
+                    <div class="logo_footer">
+                        <img src="img/logo_footer.svg" alt="">
+                        <div>
+                            <p class="footer_logo_title">«Нижегороднефтегазпроект»</p>
+                            <p class="footer_logo_pretitle">© 2019 — 2020 ООО «ННГП»</p>
+                        </div>
+                    </div>
+                    <div class="footer_last_mail_links">
+                        <a href="mailto:info@nngproekt.ru" class="footer_mail">info@nngproekt.ru</a>
+                        <a class="link--invisible" href="">Политика конфиденциальности <br>и защиты персональных данных</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jq.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

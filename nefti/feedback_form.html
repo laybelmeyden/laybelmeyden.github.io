@@ -1,0 +1,55 @@
+<div>
+    <button type="button" class="btn modal_1_btn mdl__company" data-toggle="modal" data-target="#exampleModal">
+        Связаться с нами
+    </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content mdl_content_form1">
+            <div class="modal-header mdl_header_form1">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><img src="img/plus_red.svg" alt=""></span>
+                </button>
+            </div>
+            <div class="modal-body mdl_body_form1">
+                <p class="modal_title">Напишите нам</p>
+                <div class="input_grid_form1">
+                    <form action="">
+                        <div class="input_items_form1">
+                            <label for="text_form1" class="label_text_form1">Организация*</label>
+                            <input type="text" name="organizations_name" id="text_form1" class="input_form_1_style">
+                        </div>
+                        <div class="input_items_form1">
+                            <label for="text_form1_1" class="label_text_form1">Email*</label>
+                            <input type="email" name="organizations_email" id="text_form1_1" class="input_form_1_style">
+                        </div>
+                        <div class="input_items_form1">
+                            <label for="text_form1_textarea" class="label_text_form1">Сообщение или вопрос*</label>
+                            <textarea name="organizations_text" id="text_form1_textarea" class="input_form_1_style_text_area"></textarea>
+                        </div>
+                        <div class="input_items_form1">
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" id="inputGroupFile01" class="imgInp custom-file-input" aria-describedby="inputGroupFileAddon01">
+                                    <label class="custom-file-label" for="inputGroupFile01">Прикрепить файл / до 10 Mb</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="customcheck">
+                            Нажимая на кнопку, я принимаю условия соглашения
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn_custom btn_form_1">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
