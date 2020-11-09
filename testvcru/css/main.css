@@ -139,6 +139,7 @@ a {
     margin-top: -6px;
     z-index: 3;
     outline: none;
+    border: 0 !important;
 }
 
 #counter_range input[type="range"]::-moz-range-thumb {
@@ -153,6 +154,7 @@ a {
     margin-top: -6px;
     z-index: 3;
     outline: none;
+    border: 0 !important;
 }
 
 #counter_range input[type="range"]::-ms-thumb {
@@ -167,6 +169,7 @@ a {
     margin-top: -6px;
     z-index: 3;
     outline: none;
+    border: 0 !important;
 }
 
 #counter_range .range-wrap {

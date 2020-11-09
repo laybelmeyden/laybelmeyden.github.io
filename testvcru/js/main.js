@@ -126,8 +126,10 @@
             //firefox bugs 
             const ua = navigator.userAgent;
             const rangeProgressFirefox = document.querySelector('#rangeProgress');
+            const rangeValueFirefox = document.querySelector('#counter_range .range-value');
             if (ua.search(/Firefox/) > 0) {
                 rangeProgressFirefox.style.top = 24 + 'px';
+                rangeValueFirefox.style.top = -15 + 'px';
             }
 
         };
