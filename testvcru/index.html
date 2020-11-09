@@ -10,13 +10,98 @@
 </head>
 
 <body>
-    <sectioon id="counter_range">
-        <div class="range-wrap">
-            <div class="range-value" id="rangeV"></div>
-            <input id="range" type="range" min="0" max="50000" value="0" step="1">
-            <div id="rangeV1"></div>
+    <section id="counter_range">
+        <div class="counter_range">
+            <p>Сколько денег вы откладываете в месяц?</p>
+            <p>Ответьте и узнаете, сколько копят другие.</p>
+            <div class="range-container">
+                <span class="right_count">0 ₽</span>
+                <div class="range-wrap">
+                    <div class="range-value" id="rangeValue"></div>
+                    <input id="range" type="range" min="0" max="50000" value="0" step="1">
+                    <div id="rangeProgress"></div>
+                </div>
+                <span class="left_count">50 000 ₽</span>
+            </div>
+            <div class="btn_range">
+                <button>Узнать</button>
+            </div>
         </div>
-    </sectioon>
+        <div class="final_decktop_container">
+            <p class="title_final_decktop_container">Вы откладываете <span id="count_mounth"></span> в месяц. </br> За три года вы бы заработали:</p>
+            <div class="income_grid">
+                <div class="income_grid_items">
+                    <div class="money_counter">
+                        <img src="" alt="" id="money_counter_matrac">
+                    </div>
+                    <p id="income_matrac"></p>
+                    <div class="tooltip_items tooltip_matrac_info">
+                        <p>В этом мало смысла — такие накопления «съедает» инфляция</p>
+                    </div>
+                    <p class="income_desc tooltip_matrac">если откладывать под матрас <img class="tooltip_matrac_on tooltip_on" src="img/que1.svg" alt=""><img class="tooltip_matrac_off tooltip_off" src="img/que2.svg" alt=""></p>
+                </div>
+                <div class="income_grid_items">
+                    <div class="money_counter">
+                        <img src="" alt="" id="money_counter_deposite">
+                    </div>
+                    <p id="income_deposite"></p>
+                    <div class="tooltip_items tooltip_deposite_info">
+                        <p>Ставки по вкладам различны в разных банках и зависят от многих факторов, в частности, от ключевой ставки Центрального банка РФ<a href="https://vc.ru/promo/76505-alfa-kapital-yuridicheskaya-informaciya?ea=678fa71362d1b64dda32a1e6c54730abd442d756633f11fa1548bfcc17e7bfb5#1"
+                                target="_blank"><sup>1</sup></a>.</p>
+                    </div>
+                    <p class="income_desc tooltip_deposite">если откладывать на депозит <img class="tooltip_deposite_on tooltip_on" src="img/que1.svg" alt=""><img class="tooltip_deposite_off tooltip_off" src="img/que2.svg" alt=""></p>
+                </div>
+                <div class="income_grid_items">
+                    <div class="money_counter">
+                        <img src="" alt="" id="money_counter_alpha">
+                    </div>
+                    <p id="income_alpha"></p>
+                    <div class="tooltip_items tooltip_alpha_info">
+                        <p>Вы становитесь инвестором набора компаний, который определяют профессиональные управляющие. Они решают, когда покупать и продавать ценные бумаги, чтобы обеспечить инвестиционный доход. Купить или продать паи фонда можно в любой
+                            момент
+                            <a href="https://vc.ru/promo/76505-alfa-kapital-yuridicheskaya-informaciya?ea=678fa71362d1b64dda32a1e6c54730abd442d756633f11fa1548bfcc17e7bfb5#2" target="_blank"><sup>2</sup></a>.</p>
+                    </div>
+                    <p class="income_desc tooltip_alpha">если инвестировать в ПИФ «Альфа-Капитала» <img class="tooltip_alpha_on tooltip_on" src="img/que1.svg" alt=""><img class="tooltip_alpha_off tooltip_off" src="img/que2.svg" alt="">
+                    </p>
+                </div>
+            </div>
+            <div class="middle_count">
+                <div class="middle_count_no_hidden">
+                    <p class="middle_count_no_hidden_title">А как в среднем у читателей vc.ru?</p> <img src="img/Vector1.svg" alt="">
+
+                </div>
+                <div class="middle_count_hidden">
+                    <img class="amount_count" src="" alt="">
+                    <p class="middle_count_hidden_title">в среднем откладывают читатели vc.ru</p>
+                    <div class="progress_amount">
+                        <div class="progress_amount_first">
+                            <svg width="141" height="156" viewBox="0 0 141 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="63" cy="78" r="55.5" stroke="white" stroke-width="15"/>
+                                <path d="M63 141C97.7939 141 126 112.794 126 78C126 43.2061 97.7939 15 63 15" stroke="#FE4D4A" stroke-width="30"/>
+                                </svg>
+                            <p class="progress_amount_celf">50%</p>
+                            <p class="progress_amount_body">читателей откладывают больше 1000 ₽ в месяц</p>
+                        </div>
+                        <div class="progress_amount_second">
+                            <svg width="141" height="156" viewBox="0 0 126 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="63" cy="78" r="55.5" stroke="white" stroke-width="15"/>
+                            <path d="M62 15C72.4134 15 82.2367 17.5265 90.8904 22" stroke="#FE4D4A" stroke-width="30"/>
+                            </svg>
+                            <p class="progress_amount_celf">7%</p>
+                            <p class="progress_amount_body">читателей откладывают больше 10 000 ₽ в месяц</p>
+                        </div>
+                    </div>
+                    <p class="middle_count_close">Свернуть <img src="img/VectorClose.svg" alt=""></p>
+                </div>
+            </div>
+            <div class="begin_invest">
+                <p>
+                    Как начать инвестировать?
+                </p>
+                <a href="https://alfabank.ru/make-money/investments/" target="_blank">Узнать</a>
+            </div>
+        </div>
+    </section>
 </body>
 <script src="js/main.js"></script>
 
