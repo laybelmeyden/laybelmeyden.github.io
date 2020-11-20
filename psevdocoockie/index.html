@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .cookie_avto {
+            border-width: 1px;
+            border-color: rgb(79, 84, 90);
+            border-style: solid;
+            background-color: rgb(79, 84, 90);
+            opacity: 0.8;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: auto;
+            min-height: 32px;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 35px 5px 35px;
+        }
+        
+        .cookie_avto p {
+            font-size: 10px;
+            font-family: "Calibri";
+            color: rgb(255, 255, 255);
+            line-height: 1.2;
+            text-align: left;
+            z-index: 4;
+        }
+        
+        .cookie_avto button {
+            margin-left: 24px;
+            border-width: 1px;
+            border-color: rgb(255, 255, 255);
+            border-style: solid;
+            background-color: transparent;
+            outline: none;
+            width: 100%;
+            max-width: 128px;
+            height: 20px;
+            font-size: 10px;
+            font-family: "Calibri";
+            color: rgb(255, 255, 255);
+            line-height: 1.2;
+            text-align: center;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+        }
+        
+        .cookie_avto button:hover {
+            background-color: white;
+            color: black;
+        }
+        
+        .cookie_avto a {
+            color: rgb(255, 255, 255);
+        }
+        
+        .cokkie_hidden {
+            display: none;
+        }
+    </style>
+    <div class="cookie_avto">
+        <p>Мы используем данные файлы cookie, данные об IP-адресе и местоположении, разработанные третьими лицами для анализа событий на нашем сайте. Продолжая просмотр страниц сайта, вы принимаете условия его использования. Более подробные сведения можно
+            посмотреть в <a href="https://lombard-car.ru/images/Polytic-3.pdf" target="_blank">Политике конфиденциальности</a>.</p>
+        <button>Принять</button>
+    </div>
+</body>
+<script>
+    const cookieCont = document.querySelector('.cookie_avto');
+    const cookieBtn = document.querySelector('.cookie_avto button');
+    cookieBtn.onclick = () => {
+        cookieCont.style.display = 'none';
+        localStorage.setItem('cokkieOff', 'true')
+    }
+    if (localStorage.getItem('cokkieOff')) {
+        cookieCont.classList.add('cokkie_hidden')
+    }
+    const clearCokkie = () => {
+        localStorage.clear();
+    }
+    setTimeout(clearCokkie, 500000)
+</script>
+
+</html>
