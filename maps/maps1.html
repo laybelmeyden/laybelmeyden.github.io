@@ -35,12 +35,12 @@
         #path2021 {
             cursor: pointer;
             fill: #ed2026;
-            transition: 1s;
+            transition: 0.2s;
         }
         
         .go {
             fill: #ffc501 !important;
-            transition: 1s;
+            transition: 0.2s;
             animation: pulse-me-city 1s linear infinite;
         }
         
@@ -53,6 +53,18 @@
             fill: #ed2026;
         }
         
+        #path2341,
+        #path1221,
+        #path1381,
+        #path1541,
+        #path1701,
+        #path2181,
+        #path1861,
+        #path2021 {
+            fill: #ed2026;
+            transition: 0.2s;
+        }
+        
         #path2341:hover,
         #path1221:hover,
         #path1381:hover,
@@ -62,7 +74,23 @@
         #path1861:hover,
         #path2021:hover {
             fill: #ffc501;
-            transition: 1s;
+            transition: 0.2s;
+        }
+        
+        #path66,
+        #path62,
+        #path70,
+        #path74,
+        #path78,
+        #path82,
+        #path86,
+        #path90,
+        #path94,
+        #path98,
+        #path102,
+        #path106,
+        #path34 {
+            cursor: pointer;
         }
         
         @keyframes pulse-me-city {
@@ -374,11 +402,12 @@
              d="M 0,0 C -2.164,0 -3.975,1.515 -4.43,3.541 -4.504,3.864 -4.542,4.2 -4.542,4.544 -4.542,7.052 -2.508,9.086 0,9.086 0.344,9.086 0.68,9.048 1.003,8.975 3.032,8.517 4.544,6.708 4.544,4.544 4.544,2.034 2.51,0 0,0 M 2.138,10.11 C 1.474,10.368 0.754,10.508 0,10.508 c -3.288,0 -5.964,-2.676 -5.964,-5.964 0,-0.754 0.14,-1.474 0.398,-2.138 0.858,-2.238 3.03,-3.828 5.566,-3.828 3.29,0 5.966,2.676 5.966,5.966 0,2.537 -1.59,4.708 -3.828,5.566" /></g></g></g></g></svg>
 
     <script>
-        arr1 = document.querySelector('#path1381');
-        arr2 = document.querySelector('#path1701')
+        const arr1 = document.querySelector('#path1381'),
+            arr2 = document.querySelector('#path1701'),
+            line1 = document.querySelector('pat');
         const middleCount1 = () => {
             document.querySelector('#path1701').classList.add('go');
-            document.querySelector('#path138').classList.add('go');
+            document.querySelector('#path1381').classList.add('go');
             document.querySelector('#path66').classList.add('anomateGo');
             document.querySelector('#path70').classList.add('anomateGo');
             document.querySelector('#path74').classList.add('anomateGo');
@@ -395,7 +424,7 @@
         }
         const middleCount2 = () => {
             document.querySelector('#path1701').classList.remove('go');
-            document.querySelector('#path138').classList.remove('go');
+            document.querySelector('#path1381').classList.remove('go');
             document.querySelector('#path66').classList.remove('anomateGo');
             document.querySelector('#path70').classList.remove('anomateGo');
             document.querySelector('#path74').classList.remove('anomateGo');
@@ -413,6 +442,44 @@
 
         arr1.addEventListener("mouseover", middleCount1);
         arr1.addEventListener("mouseout", middleCount2);
+        document.querySelector('#path66').addEventListener("mouseover", middleCount1);
+        document.querySelector('#path66').addEventListener("mouseout", middleCount2);
+
+        document.querySelector('#path62').addEventListener("mouseover", middleCount1);
+        document.querySelector('#path62').addEventListener("mouseout", middleCount2);
+
+        document.querySelector('#path70').addEventListener("mouseover", middleCount1);
+        document.querySelector('#path70').addEventListener("mouseout", middleCount2);
+
+        document.querySelector('#path74').addEventListener("mouseover", middleCount1);
+        document.querySelector('#path74').addEventListener("mouseout", middleCount2);
+
+        document.querySelector('#path78').addEventListener("mouseover", middleCount1);
+        document.querySelector('#path78').addEventListener("mouseout", middleCount2);
+
+        document.querySelector('#path82').addEventListener("mouseover", middleCount1);
+        document.querySelector('#path82').addEventListener("mouseout", middleCount2);
+
+        document.querySelector('#path86').addEventListener("mouseover", middleCount1);
+        document.querySelector('#path86').addEventListener("mouseout", middleCount2);
+
+        document.querySelector('#path90').addEventListener("mouseover", middleCount1);
+        document.querySelector('#path90').addEventListener("mouseout", middleCount2);
+
+        document.querySelector('#path94').addEventListener("mouseover", middleCount1);
+        document.querySelector('#path94').addEventListener("mouseout", middleCount2);
+
+        document.querySelector('#path98').addEventListener("mouseover", middleCount1);
+        document.querySelector('#path98').addEventListener("mouseout", middleCount2);
+
+        document.querySelector('#path102').addEventListener("mouseover", middleCount1);
+        document.querySelector('#path102').addEventListener("mouseout", middleCount2);
+
+        document.querySelector('#path106').addEventListener("mouseover", middleCount1);
+        document.querySelector('#path106').addEventListener("mouseout", middleCount2);
+
+        document.querySelector('#path34').addEventListener("mouseover", middleCount1);
+        document.querySelector('#path34').addEventListener("mouseout", middleCount2);
     </script>
 </body>
 
