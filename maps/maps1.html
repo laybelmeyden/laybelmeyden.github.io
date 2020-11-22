@@ -41,6 +41,7 @@
         .go {
             fill: #ffc501 !important;
             transition: 1s;
+            animation: pulse-me-city 1s linear infinite;
         }
         
         .anomateGo {
@@ -62,6 +63,24 @@
         #path2021:hover {
             fill: #ffc501;
             transition: 1s;
+        }
+        
+        @keyframes pulse-me-city {
+            0% {
+                opacity: 1;
+            }
+            20% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            70% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 1;
+            }
         }
         
         @keyframes pulse-me {
@@ -359,7 +378,7 @@
         arr2 = document.querySelector('#path1701')
         const middleCount1 = () => {
             document.querySelector('#path1701').classList.add('go');
-
+            document.querySelector('#path138').classList.add('go');
             document.querySelector('#path66').classList.add('anomateGo');
             document.querySelector('#path70').classList.add('anomateGo');
             document.querySelector('#path74').classList.add('anomateGo');
@@ -376,7 +395,7 @@
         }
         const middleCount2 = () => {
             document.querySelector('#path1701').classList.remove('go');
-
+            document.querySelector('#path138').classList.remove('go');
             document.querySelector('#path66').classList.remove('anomateGo');
             document.querySelector('#path70').classList.remove('anomateGo');
             document.querySelector('#path74').classList.remove('anomateGo');
