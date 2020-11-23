@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .calcs_container {
+            border: 10px solid rgba(135, 158, 9, 0.84);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        }
+        
+        #calcs {
+            width: 550px;
+            margin: 0 auto;
+        }
+        
+        input[type=range]:focus {
+            outline: none;
+        }
+        
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            animate: 0.2s;
+            background: rgba(135, 158, 9, 0.84);
+            border-radius: 25px;
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 1);
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -8px;
+        }
+        
+        input[type=range]:focus::-webkit-slider-runnable-track {
+            background: rgba(135, 158, 9, 0.84);
+        }
+        
+        .range-wrap {
+            width: 100%;
+            position: relative;
+            margin-top: 40px;
+        }
+        
+        .range-value {
+            position: absolute;
+            top: -50%;
+        }
+        
+        .range-value span {
+            width: 30px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            background: rgba(135, 158, 9, 0.84);
+            color: #fff;
+            font-size: 12px;
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border-radius: 6px;
+        }
+        
+        .range-value span:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 10px solid rgba(135, 158, 9, 0.84);
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            margin-top: -1px;
+        }
+        
+        body {
+            min-height: 100vh;
+            padding: 0 10vh;
+            margin: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+        
+        input[type=range] {
+            -webkit-appearance: none;
+            margin: 20px 0;
+            width: 100%;
+        }
+        
+        input[type=range]:focus {
+            outline: none;
+        }
+        
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            animate: 0.2s;
+            background: rgba(135, 158, 9, 0.84);
+            border-radius: 25px;
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 1);
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -8px;
+        }
+        
+        input[type=range]:focus::-webkit-slider-runnable-track {
+            background: rgba(135, 158, 9, 0.84);
+        }
+        
+        .range-wrap {
+            width: 100%;
+            position: relative;
+        }
+        
+        .range-value {
+            position: absolute;
+            top: -50%;
+        }
+        
+        .range-value span {
+            width: 30px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            background: rgba(135, 158, 9, 0.84);
+            color: #fff;
+            font-size: 12px;
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border-radius: 6px;
+        }
+        
+        .range-value span:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 10px solid rgba(135, 158, 9, 0.84);
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            margin-top: -1px;
+        }
+        
+        [type="radio"]:checked,
+        [type="radio"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+        }
+        
+        [type="radio"]:checked+label,
+        [type="radio"]:not(:checked)+label {
+            position: relative;
+            padding-left: 28px;
+            cursor: pointer;
+            line-height: 20px;
+            display: inline-block;
+        }
+        
+        [type="radio"]:checked+label:before,
+        [type="radio"]:not(:checked)+label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 1px solid rgba(135, 158, 9, 0.84);
+            border-radius: 100%;
+            background: #fff;
+        }
+        
+        [type="radio"]:checked+label:after,
+        [type="radio"]:not(:checked)+label:after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: rgba(135, 158, 9, 0.84);
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            border-radius: 100%;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+        
+        [type="radio"]:not(:checked)+label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        
+        [type="radio"]:checked+label:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        
+        .first_p {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .first_p_1 {
+            font-size: 28px;
+            margin: 0;
+        }
+        
+        .first_p_2 {
+            font-size: 28px;
+            margin-top: 20px;
+        }
+        
+        .p_1 {
+            font-size: 24px;
+            font-weight: 900;
+        }
+        
+        .p_2 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .form_range {
+            width: 85%;
+        }
+        
+        .range_value_count {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: -10px;
+        }
+        
+        .range_value_count p {
+            font-size: 16px;
+            color: rgba(135, 158, 9, 0.84);
+            font-weight: bold;
+        }
+        
+        .checked_input_overs {
+            display: flex;
+        }
+        
+        .checked_input_overs p {
+            margin-right: 20px;
+        }
+        
+        .p_3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .inp_1 {
+            height: 40px;
+            width: 100%;
+            outline: none;
+            border-radius: 0;
+            margin-bottom: 15px;
+            border: 1px solid black;
+            font-size: 18px;
+            padding: 0;
+            text-indent: 15px;
+        }
+        
+        .inp_btn_alls {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
+            margin-top: 14px;
+        }
+        /* .inp_btn_alls button {
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            width: 300px;
+            height: 40px;
+            background-color: rgba(135, 158, 9, 0.84);
+            color: white;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+        } */
+        
+        .inp_btn_alls button {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: 100%;
+            height: 58px;
+            padding-top: 2px;
+            border: none;
+            position: relative;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            cursor: pointer;
+            overflow: hidden;
+            background: rgba(135, 158, 9, 0.84);
+            -webkit-transition: ease 0.3s;
+            transition: ease 0.3s;
+        }
+        
+        .inp_btn_alls button:hover {
+            opacity: 0.7;
+        }
+        
+        .inp_btn_alls button:after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 300px;
+            margin-left: 60px;
+            background: #fff;
+            background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.7) 100%);
+            background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.7) 100%);
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.7) 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#b3ffffff', endColorstr='#b3ffffff', GradientType=0);
+            position: absolute;
+            left: -40px;
+            top: -150px;
+            z-index: 1;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            -webkit-transition: all 0.1s;
+            transition: all 0.1s;
+            -webkit-animation-name: slideme;
+            animation-name: slideme;
+            -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+            -webkit-animation-delay: 0.05s;
+            animation-delay: 0.05s;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+        
+        @-webkit-keyframes slideme {
+            0% {
+                left: -30px;
+                margin-left: 0px;
+            }
+            30% {
+                left: 110%;
+                margin-left: 80px;
+            }
+            100% {
+                left: 110%;
+                margin-left: 80px;
+            }
+        }
+        
+        @media screen and (max-width:501px) {
+            .calcs_container {
+                padding: 15px;
+            }
+            .form_range {
+                width: 100%;
+            }
+        }
+    </style>
+    <section id="calcs">
+        <p class="first_p">Бесплатный выезд в день обращения</p>
+        <p class="first_p_1">Гарантия на работу 5 лет</p>
+        <p class="first_p_2">Четкое соблюдение сроков</p>
+        <div class="calcs_container">
+            <p class="p_1">Рассчитайте стоимость ремонта</p>
+            <form class="form_range" action="">
+                <p class="p_2">Тип объекта</p>
+                <p>
+                    <input type="radio" id="test1" name="radio-group" checked>
+                    <label for="test1">Новостройка</label>
+                </p>
+                <p>
+                    <input type="radio" id="test2" name="radio-group">
+                    <label for="test2">Вторичное жилье</label>
+                </p>
+                <p>
+                    <input type="radio" id="test3" name="radio-group">
+                    <label for="test3">Дом/коттедж</label>
+                </p>
+                <p>
+                    <input type="radio" id="test4" name="radio-group">
+                    <label for="test4">Коммунальная недвижимость</label>
+                </p>
+
+                <p class="p_2">Площадь отделки</p>
+                <div class="counter_range">
+                    <div class="range-wrap">
+                        <div class="range-value" id="rangeV"></div>
+                        <input id="range" type="range" min="0" max="500" value="0" step="1">
+                    </div>
+                    <div class="range_value_count">
+                        <p>1</p>
+                        <p>500</p>
+                    </div>
+                </div>
+                <p class="p_3">Количество комнат</p>
+                <div class="checked_input_overs">
+                    <p>
+                        <input type="radio" id="test5" name="radio-group1" checked>
+                        <label for="test5">1</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="test6" name="radio-group1">
+                        <label for="test6">2</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="test7" name="radio-group1">
+                        <label for="test7">3</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="test8" name="radio-group1">
+                        <label for="test8">4+</label>
+                    </p>
+                </div>
+                <div></div>
+                <div>
+                    <input class="inp_1" type="text" value="" name="" placeholder="Как вас зовут?" required>
+                </div>
+                <div>
+                    <input class="inp_1" type="text" value="" name="" placeholder="Номер телефона" required>
+                </div>
+
+                <div class="inp_btn_alls">
+                    <button type="submit">Узнать стоимость</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const
+            range = document.getElementById('range'),
+            rangeV = document.getElementById('rangeV'),
+            setValue = () => {
+                const
+                    newValue = Number((range.value - range.min) * 100 / (range.max - range.min)),
+                    newPosition = 10 - (newValue * 0.2);
+                rangeV.innerHTML = `<span>${range.value}</span>`;
+                rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+            };
+        document.addEventListener("DOMContentLoaded", setValue);
+        range.addEventListener('input', setValue);
+    </script>
+</body>
+
+</html>
