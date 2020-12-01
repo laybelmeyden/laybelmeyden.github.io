@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background: #f5f8fb;
+        }
+        
+        div {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        p {
+            font-size: 36px;
+            font-family: 'Roboto', Arial, sans-serif;
+            text-align: center;
+            color: #6f00c6;
+            font-weight: bold;
+        }
+        
+        a {
+            font-size: 36px;
+            font-family: 'Roboto', Arial, sans-serif;
+            text-align: center;
+            color: #6f00c6;
+            font-weight: bold;
+            display: none;
+        }
+        
+        a:hover {
+            opacity: 0.7;
+        }
+    </style>
+    <div>
+        <p id="text-main"></p>
+        <a href="mailto:ir@ai1.vc" id="text-2">ir@ai1.vc</a>
+    </div>
+
+    <script>
+        function writeTextByJS(id, text, speed) {
+
+            var ele = document.getElementById(id),
+                txt = text.join("").split("");
+
+            var interval = setInterval(function() {
+
+                if (!txt[0]) {
+
+                    return clearInterval(interval);
+                };
+
+                ele.innerHTML += txt.shift();
+            }, speed != undefined ? speed : 80);
+
+            return false;
+        };
+        const a = document.querySelector('a')
+        const b = () => {
+            a.style.display = 'block'
+        }
+        setTimeout(b, 6000)
+        writeTextByJS(
+            "text-main", [
+                "A little bit and we will finish the site, come back please in the few days\n",
+            ]
+        );
+    </script>
+</body>
+
+</html>

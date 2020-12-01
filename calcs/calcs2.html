@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        [type="radio"]:checked,
+        [type="radio"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+        }
+        
+        [type="radio"]:checked+label,
+        [type="radio"]:not(:checked)+label {
+            position: relative;
+            padding-left: 28px;
+            cursor: pointer;
+            line-height: 20px;
+            display: inline-block;
+        }
+        
+        [type="radio"]:checked+label:before,
+        [type="radio"]:not(:checked)+label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #2A265F;
+            border-radius: 100%;
+            background: #fff;
+        }
+        
+        [type="radio"]:checked+label:after,
+        [type="radio"]:not(:checked)+label:after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #2A265F;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            border-radius: 100%;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+        
+        [type="radio"]:not(:checked)+label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        
+        [type="radio"]:checked+label:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        
+        @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+        * {
+            box-sizing: border-box;
+            outline: none !important;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-image: linear-gradient(45deg, #7175da, #9790F2);
+            font-family: 'Muli', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .forms_radio {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .courses-container {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .course {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            max-width: 100%;
+            margin: 20px;
+            overflow: hidden;
+            width: 80%;
+        }
+        
+        .course h6 {
+            opacity: 0.6;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        .course label {
+            opacity: 0.6;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        
+        .btn:hover {
+            opacity: 0.7;
+        }
+        
+        .course h2 {
+            letter-spacing: 1px;
+            margin: 10px 0;
+        }
+        
+        .course-preview {
+            background-color: #2A265F;
+            color: #fff;
+            padding: 30px;
+            width: 40%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .course-preview a {
+            color: #fff;
+            display: inline-block;
+            font-size: 12px;
+            opacity: 0.6;
+            margin-top: 30px;
+            text-decoration: none;
+        }
+        
+        .course-info {
+            padding: 30px;
+            position: relative;
+            width: 100%;
+        }
+        
+        .progress-container {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            text-align: right;
+            width: 150px;
+        }
+        
+        .progress {
+            background-color: #ddd;
+            border-radius: 3px;
+            height: 5px;
+            width: 100%;
+        }
+        
+        .progress::after {
+            border-radius: 3px;
+            background-color: #2A265F;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 5px;
+            width: 66%;
+        }
+        
+        .progress-text {
+            font-size: 10px;
+            opacity: 0.6;
+            letter-spacing: 1px;
+        }
+        
+        .btn {
+            background-color: #2A265F;
+            border: 0;
+            border-radius: 50px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+            color: #fff;
+            font-size: 16px;
+            padding: 12px 25px;
+            letter-spacing: 1px;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        .grid_forms {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 40px;
+        }
+        
+        .forms_containers input {
+            width: 100%;
+            text-indent: 5px;
+            height: 30px;
+            border-radius: 0;
+            border: 1px solid #2A265F;
+            font-size: 16px;
+        }
+        
+        #in_select {
+            height: 30px;
+            border-radius: 0;
+            border: 1px solid #2A265F;
+            font-size: 16px;
+        }
+        
+        .forms_radio_btn {
+            display: flex;
+        }
+        
+        .forms_radio_btn p {
+            margin-right: 30px;
+        }
+        
+        .forms_radio div {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+        
+        #result_sec {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 40px;
+            display: none;
+        }
+        
+        .btn_result_calc {
+            text-align: right;
+            width: 100%;
+            margin-top: 30px;
+        }
+        
+        .visible {
+            display: grid !important;
+        }
+    </style>
+    <div class="courses-container">
+        <div class="course">
+            <div class="course-preview">
+                <h2>Расчета калорий для похудения</h2>
+            </div>
+            <div class="course-info">
+                <div>
+                    <div class="grid_forms">
+                        <div class="forms_containers">
+                            <h6 for="in_height">рост</h6>
+                            <input type="number" id="in_height" min="140" max="230" value="140">
+                        </div>
+                        <div class="forms_containers">
+                            <h6 for="in_height">вес</h6>
+                            <input type="number" id="in_weight" min="30" max="250" value="30">
+                        </div>
+                        <div class="forms_containers">
+                            <h6 for="in_height">Возраст</h6>
+                            <input type="number" id="in_years" min="18" max="99" value="18">
+                        </div>
+                    </div>
+                    <div class="forms_radio">
+                        <div class="forms_radio_btn">
+                            <p>
+                                <input type="radio" id="clc_radio_1" name="radio-group3" value="1" checked>
+                                <label for="clc_radio_1" value="men">Мужчина</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="clc_radio_2" name="radio-group3" value="2">
+                                <label for="clc_radio_2">Женщина</label>
+                            </p>
+                        </div>
+                        <div>
+                            <select name="" id="in_select">
+                                <option value="1">не занимаюсь спортом</option>
+                                <option value="1.2">(легкая) - кардионагрузка 30-40 мин в день, 2-3 раза в неделю</option>
+                                <option value="1.3">(средняя) кардионагрузка 30-40 мин в день, 4-5 раз в неделю</option>
+                                <option value="1.5">(умеренная) силовые тренировки, 60 -90 мин в день, 5-7 раз в неделю</option>
+                                <option value="1.7">(тяжелые) силовые тренировки, физическая работа (строительные работы, сельское хозяйство и тд.)   </option>
+                                <option value="1.9">(очень тяжелые) профессиональный спорт, 2 раза в день</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div id="result_sec">
+                    <div>
+                        <h6>Хочу снизить вес </h6>
+                        <h2 id="kkal_2"></h2>
+                    </div>
+                    <div>
+                        <h6>Хочу набрать массу </h6>
+                        <h2 id="kkal_3"></h2>
+                    </div>
+                    <div>
+                        <h6>Хочу остаться в прежнем весе </h6>
+                        <h2 id="kkal_1"></h2>
+                    </div>
+                </div>
+                <div class="btn_result_calc">
+                    <button class="btn" id="calc_btns">Рассчитать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const
+            clcHeight = document.querySelector('#in_height'),
+            clcWeight = document.querySelector('#in_weight'),
+            clcYears = document.querySelector('#in_years'),
+            btnCalc = document.querySelector('#btnclc'),
+            result1 = document.querySelector('#kkal_1'),
+            result2 = document.querySelector('#kkal_2'),
+            result3 = document.querySelector('#kkal_3'),
+            result4 = document.querySelector('#kkal_4'),
+            clcRadio_men = document.querySelector('#clc_radio_1'),
+            clcRadio_women = document.querySelector('#clc_radio_2'),
+            clcSelect = document.querySelector('#in_select'),
+            result_calcs_sec = document.querySelector('#result_sec'),
+            result_calcs_btn = document.querySelector('#calc_btns');
+
+        const btnClc = () => {
+            result_calcs_sec.classList.toggle('visible')
+        }
+        const clcsFun = () => {
+            if (clcRadio_men.checked) {
+                const resulMen = ((10 * clcWeight.value) + (6.25 * clcHeight.value) - (5 * clcYears.value) + 5) * Number(clcSelect.value);
+                result1.textContent = Math.floor(resulMen) + ' ккал.';
+                result2.textContent = Math.floor(resulMen - (resulMen * 0.15)) + ' ккал.';
+                result3.textContent = Math.floor(resulMen + (resulMen * 0.15)) + ' ккал.';
+            }
+            if (clcRadio_women.checked) {
+                const resulWomen = ((10 * clcWeight.value) + (6.25 * clcHeight.value) - (5 * clcYears.value) - 161) * Number(clcSelect.value);
+                result1.textContent = Math.floor(resulWomen) + ' ккал.';
+                result2.textContent = Math.floor(resulWomen - (resulWomen * 0.15)) + ' ккал.';
+                result3.textContent = Math.floor(resulWomen + (resulWomen * 0.15)) + ' ккал.';
+            }
+        }
+
+        clcHeight.addEventListener('input', clcsFun)
+        clcWeight.addEventListener('input', clcsFun)
+        clcYears.addEventListener('input', clcsFun)
+        clcRadio_men.addEventListener('input', clcsFun)
+        clcRadio_women.addEventListener('input', clcsFun)
+        clcSelect.addEventListener('input', clcsFun)
+        result_calcs_btn.addEventListener('click', () => {
+            result_calcs_sec.classList.add('visible')
+            if (clcRadio_men.checked) {
+                const resulMen = ((10 * clcWeight.value) + (6.25 * clcHeight.value) - (5 * clcYears.value) + 5) * Number(clcSelect.value);
+                result1.textContent = Math.floor(resulMen) + ' ккал.';
+                result2.textContent = Math.floor(resulMen - (resulMen * 0.15)) + ' ккал.';
+                result3.textContent = Math.floor(resulMen + (resulMen * 0.15)) + ' ккал.';
+            }
+            if (clcRadio_women.checked) {
+                const resulWomen = ((10 * clcWeight.value) + (6.25 * clcHeight.value) - (5 * clcYears.value) - 161) * Number(clcSelect.value);
+                result1.textContent = Math.floor(resulWomen) + ' ккал.';
+                result2.textContent = Math.floor(resulWomen - (resulWomen * 0.15)) + ' ккал.';
+                result3.textContent = Math.floor(resulWomen + (resulWomen * 0.15)) + ' ккал.';
+            }
+        })
+    </script>
+</body>
+
+</html>
