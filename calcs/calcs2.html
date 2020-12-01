@@ -82,9 +82,11 @@
             margin: 0;
         }
         
+        .forms_containers {}
+        
         .forms_radio {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 0.5fr 1fr;
         }
         
         .courses-container {
@@ -111,7 +113,7 @@
             margin: 0;
             letter-spacing: 1px;
             text-transform: uppercase;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         
         .course label {
@@ -132,13 +134,17 @@
         }
         
         .course-preview {
-            background-color: #2A265F;
+            /* background-color: #2A265F; */
             color: #fff;
             padding: 30px;
             width: 40%;
             display: flex;
             align-items: center;
             text-align: center;
+            background-image: url(https://yobte.ru/uploads/posts/2019-11/devushki-na-fitnese-156-foto-10.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
         
         .course-preview a {
@@ -209,18 +215,26 @@
         
         .forms_containers input {
             width: 100%;
-            text-indent: 5px;
+            text-indent: 0;
             height: 30px;
             border-radius: 0;
-            border: 1px solid #2A265F;
+            border-bottom: 3px solid #2A265F !important;
             font-size: 16px;
+            border: none;
+            opacity: 0.6;
+            letter-spacing: 1px;
         }
         
         #in_select {
             height: 30px;
             border-radius: 0;
-            border: 1px solid #2A265F;
-            font-size: 16px;
+            border-bottom: 3px solid #2A265F !important;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            width: 100%;
+            opacity: 0.6;
         }
         
         .forms_radio_btn {
@@ -252,6 +266,44 @@
         
         .visible {
             display: grid !important;
+        }
+        
+        @media screen and (max-width:1200px) {
+            .course {
+                overflow: hidden;
+                flex-direction: column;
+            }
+            .course-preview {
+                width: 100%;
+            }
+            .grid_forms {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-column-gap: 40px;
+                grid-row-gap: 30px;
+            }
+            .forms_radio {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            .forms_radio div {
+                display: flex;
+                flex-direction: column;
+                grid-row-gap: 30px;
+                align-items: end;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+            .btn_result_calc {
+                text-align: center;
+                width: 100%;
+                margin-top: 30px;
+            }
+            #result_sec {
+                grid-template-columns: 1fr;
+                grid-column-gap: 40px;
+                margin-top: 20px;
+            }
         }
     </style>
     <div class="courses-container">
