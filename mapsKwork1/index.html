@@ -17,6 +17,11 @@
         /* transform=translate(100,100) */
         /* start animations */
         
+        .no_vision {
+            transform: translate(2000%, 0) !important;
+            transition: 20s;
+        }
+        
         .amin_pl_1 {
             transform: translate(0, 0) !important;
             transition: 2s;
@@ -617,6 +622,30 @@
             firstPl_10.classList.add('amin_pl_10')
         }
         window.onload = () => mapsAllWorlds()
+        const a_russian = document.querySelector('#g1204')
+        a_russian.onclick = () => {
+            a_russian.classList.add('no_vision')
+        }
+        const a_africa = document.querySelector('#g1161')
+        a_africa.onclick = () => {
+            a_africa.classList.add('no_vision')
+        }
+        const a_australia = document.querySelector('#g1113')
+        a_australia.onclick = () => {
+            a_australia.classList.add('no_vision')
+        }
+        const a_usa1 = document.querySelector('#g1176')
+        a_usa1.onclick = () => {
+            a_usa1.classList.add('no_vision')
+        }
+        const a_usa2 = document.querySelector('#g1187')
+        a_usa2.onclick = () => {
+            a_usa2.classList.add('no_vision')
+        }
+        const a_greenland = document.querySelector('#g1191')
+        a_greenland.onclick = () => {
+            a_greenland.classList.add('no_vision')
+        }
     </script>
 
 </body>
