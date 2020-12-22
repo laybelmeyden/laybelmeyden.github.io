@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.24748737"
-     inkscape:cx="3228.625"
+     inkscape:cx="2501.3152"
      inkscape:cy="1005.3251"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -501,6 +501,63 @@
              style="fill:#ff0000" />
         </g>
       </g>
+    </g>
+    <g
+       id="g964"
+       transform="matrix(0.26458333,0,0,0.26458333,1087.0101,-320.10055)">
+      <g
+         id="g908">
+	<path
+   id="path906"
+   d="m 121.325,10.925 -8.5,-8.399 c -2.3,-2.3 -6.1,-2.3 -8.5,0 L 61.925,44.925 18.726,1.726 c -2.301,-2.301 -6.101,-2.301 -8.5,0 l -8.5,8.5 c -2.301,2.3 -2.301,6.1 0,8.5 l 43.1,43.1 -42.3,42.5 c -2.3,2.3 -2.3,6.1 0,8.5 l 8.5,8.5 c 2.3,2.3 6.1,2.3 8.5,0 l 42.399,-42.4 42.4,42.4 c 2.3,2.3 6.1,2.3 8.5,0 l 8.5,-8.5 c 2.3,-2.3 2.3,-6.1 0,-8.5 l -42.5,-42.4 42.4,-42.399 c 2.4,-2.402 2.4,-6.202 0.1,-8.602 z"
+   inkscape:connector-curvature="0" />
+
+</g>
+      <g
+         id="g910">
+</g>
+      <g
+         id="g912">
+</g>
+      <g
+         id="g914">
+</g>
+      <g
+         id="g916">
+</g>
+      <g
+         id="g918">
+</g>
+      <g
+         id="g920">
+</g>
+      <g
+         id="g922">
+</g>
+      <g
+         id="g924">
+</g>
+      <g
+         id="g926">
+</g>
+      <g
+         id="g928">
+</g>
+      <g
+         id="g930">
+</g>
+      <g
+         id="g932">
+</g>
+      <g
+         id="g934">
+</g>
+      <g
+         id="g936">
+</g>
+      <g
+         id="g938">
+</g>
     </g>
   </g>
 </svg>
