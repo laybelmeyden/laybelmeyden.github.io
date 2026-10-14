@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gifts — вход</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <main class="page">
+    <header class="top-line" id="user-bar" hidden>
+      <p id="nav-email-wrap">Почта <strong id="user-email"></strong></p>
+      <p id="nav-uid-wrap">UID <strong id="user-uid"></strong></p>
+      <button class="linkish" id="logout" type="button">Выйти</button>
+      <a class="linkish" id="go-login" href="./" hidden>Войти</a>
+    </header>
+
+    <section class="card setup-card" id="setup" hidden>
+      <h1>CONFIG</h1>
+      <p class="lead">Вставьте ключи в <code>gifts/js/firebase-config.js</code>.</p>
+      <ol>
+        <li>Firebase → Project settings</li>
+        <li>Web app → firebaseConfig</li>
+        <li>Authentication → Email/Password и Google</li>
+      </ol>
+    </section>
+
+    <section class="stage" id="app" hidden>
+      <div class="hero">
+        <p class="kicker">Лучший подарок — ты сам</p>
+        <h1>
+          список<br>
+          подарков<br>
+          <span>твоей мечты</span>
+        </h1>
+        <p class="lead">Войдите, чтобы создать список подарков своей мечты.</p>
+        <article class="lore-box">
+          <div>
+            <h2>Настоящие списки. Настоящие истории.</h2>
+            <p>Никакого шума. Только вход, ваши задачи и фиолетовое небо.</p>
+          </div>
+          <svg class="lore-heart" viewBox="0 0 7 6" aria-hidden="true" shape-rendering="crispEdges">
+            <rect x="1" y="0" width="2" height="1" fill="#e9d5ff"/>
+            <rect x="4" y="0" width="2" height="1" fill="#e9d5ff"/>
+            <rect x="0" y="1" width="7" height="2" fill="#c084fc"/>
+            <rect x="2" y="1" width="1" height="1" fill="#f5f3ff"/>
+            <rect x="1" y="3" width="5" height="1" fill="#a855f7"/>
+            <rect x="2" y="4" width="3" height="1" fill="#7c3aed"/>
+            <rect x="3" y="5" width="1" height="1" fill="#5b21b6"/>
+          </svg>
+        </article>
+      </div>
+
+      <div class="scene" aria-hidden="true">
+        <div class="beam"></div>
+        <div class="knights">
+          <svg class="knight knight-cat" viewBox="0 0 312 880" preserveAspectRatio="xMidYMax meet">
+            <image href="img/knight-cat.png" width="312" height="880"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="auth-wrap">
+        <p id="error" class="error" hidden></p>
+
+        <div class="auth-card" id="signed-out">
+          <div class="portrait" aria-hidden="true">
+            <div class="heart-field">
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <p class="card-kicker" id="form-title">Вход</p>
+          <h2>Мечтатель</h2>
+          <p class="quote">Войди тихо. За этим порогом уже ждут подарки, которые ты сам себе обещал</p>
+
+          <form id="auth-form">
+            <label>
+              Почта
+              <input id="email" type="email" autocomplete="email" required>
+            </label>
+            <label>
+              Пароль
+              <input id="password" type="password" autocomplete="current-password" minlength="6" required>
+            </label>
+            <div class="actions">
+              <button class="primary" id="submit" type="submit">Войти</button>
+              <button class="ghost" id="google" type="button">Google</button>
+            </div>
+            <button class="linkish" id="toggle-mode" type="button">Нет аккаунта? Создать</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="board" id="board" hidden>
+      <header class="board-head">
+        <div class="board-title">
+          <h2 id="list-heading">Ваш список подарков</h2>
+          <button class="primary" id="add-gift-top" type="button" hidden>Добавить</button>
+        </div>
+        <div class="actions board-actions">
+          <button class="primary" id="open-list" type="button">Открыть</button>
+          <button class="ghost" id="share-list" type="button">Поделиться</button>
+        </div>
+      </header>
+      <div class="board-body">
+        <p id="board-error" class="error" hidden></p>
+        <p id="guest-note" class="guest-note" hidden>Это чужой лист. Можно смотреть, но не добавлять.</p>
+        <div class="empty-state" id="gift-empty">
+          <p id="gift-empty-text">Пока пусто. Добавьте первый подарок.</p>
+          <button class="primary" id="add-gift-empty" type="button">Добавить</button>
+        </div>
+        <div class="gift-grid" id="gift-grid"></div>
+      </div>
+    </section>
+
+    <footer class="bottom" hidden>
+      <div class="dialogue" id="dialogue-box" role="button" tabindex="0" title="Нажмите, чтобы следующую фразу">
+        <svg class="mini-heart" viewBox="0 0 7 6" aria-hidden="true" shape-rendering="crispEdges">
+          <rect x="1" y="0" width="2" height="1" fill="#ff6b8a"/>
+          <rect x="4" y="0" width="2" height="1" fill="#ff6b8a"/>
+          <rect x="0" y="1" width="7" height="2" fill="#ff4d6d"/>
+          <rect x="2" y="1" width="1" height="1" fill="#ffd0d8"/>
+          <rect x="1" y="3" width="5" height="1" fill="#e11d48"/>
+          <rect x="2" y="4" width="3" height="1" fill="#be123c"/>
+          <rect x="3" y="5" width="1" height="1" fill="#9f1239"/>
+        </svg>
+        <p id="dialogue">* Подарок — это милость, которую можно подержать в руках.</p>
+      </div>
+    </footer>
+  </main>
+  <div class="toast" id="toast" hidden>Ссылка скопирована</div>
+  <div class="modal" id="add-modal" hidden>
+    <button class="modal-backdrop" type="button" data-close-modal aria-label="Закрыть"></button>
+    <div class="auth-card modal-card" role="dialog" aria-modal="true" aria-labelledby="add-modal-title">
+      <h2 class="card-kicker" id="add-modal-title">Добавить новый подарок</h2>
+      <p id="gift-form-error" class="error" hidden></p>
+      <form id="gift-form">
+        <label>
+          Название товара
+          <input id="gift-title" type="text" maxlength="150" required>
+        </label>
+        <label>
+          URL картинки
+          <input id="gift-image" type="text" inputmode="url" autocomplete="off" placeholder="https://">
+        </label>
+        <label>
+          Ссылка на товар
+          <input id="gift-link" type="text" inputmode="url" autocomplete="off" placeholder="https://">
+        </label>
+        <label>
+          Стоимость
+          <input id="gift-price" type="text" maxlength="40" placeholder="1990 ₽">
+        </label>
+        <button class="primary" id="gift-save" type="submit">Сохранить</button>
+      </form>
+      <button class="linkish" type="button" data-close-modal>Закрыть</button>
+    </div>
+  </div>
+  <div class="modal" id="gift-modal" hidden>
+    <button class="modal-backdrop" type="button" data-close-modal aria-label="Закрыть"></button>
+    <div class="auth-card modal-card gift-view" role="dialog" aria-modal="true" aria-labelledby="gift-view-title">
+      <p class="card-kicker">Подарок</p>
+      <p id="gift-view-status" class="lead" hidden>Открываем подарок…</p>
+      <div id="gift-view-body">
+        <div class="gift-tile-frame" id="gift-view-frame"></div>
+        <h2 id="gift-view-title"></h2>
+        <p id="gift-view-price"></p>
+        <a class="primary" id="gift-view-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Открыть товар</a>
+        <div class="actions">
+          <button class="ghost" id="gift-view-delete" type="button" hidden>Удалить</button>
+          <button class="linkish" type="button" data-close-modal>Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="open-modal" hidden>
+    <button class="modal-backdrop" type="button" data-close-modal aria-label="Закрыть"></button>
+    <div class="auth-card modal-card" role="dialog" aria-modal="true" aria-labelledby="open-modal-title">
+      <p class="card-kicker">Лист</p>
+      <h2 id="open-modal-title">Открыть по UID</h2>
+      <form class="lookup" id="lookup-form">
+        <label>
+          UID
+          <input id="lookup-uid" type="text" autocomplete="off" spellcheck="false" placeholder="вставьте UID">
+        </label>
+        <div class="actions">
+          <button class="primary" type="submit">Открыть</button>
+          <button class="ghost" id="my-list" type="button" hidden>Мой лист</button>
+        </div>
+      </form>
+      <button class="linkish" type="button" data-close-modal>Закрыть</button>
+    </div>
+  </div>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
