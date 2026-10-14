@@ -15,7 +15,7 @@
       <p id="nav-email-wrap">Почта <strong id="user-email"></strong></p>
       <p id="nav-uid-wrap">UID <strong id="user-uid"></strong></p>
       <button class="linkish" id="logout" type="button">Выйти</button>
-      <a class="linkish" id="go-login" href="./" hidden>Войти</a>
+      <a class="linkish" id="go-login" href="#login" hidden>Войти</a>
     </header>
 
     <section class="card setup-card" id="setup" hidden>
@@ -36,6 +36,7 @@
           подарков<br>
           <span>твоей мечты</span>
         </h1>
+        <a class="primary hero-enter" href="#login">Войти</a>
         <p class="lead">Войдите, чтобы создать список подарков своей мечты.</p>
         <article class="lore-box">
           <div>
@@ -55,17 +56,72 @@
       </div>
 
       <div class="scene" aria-hidden="true">
-        <div class="beam"></div>
-        <div class="knights">
-          <svg class="knight knight-cat" viewBox="0 0 312 880" preserveAspectRatio="xMidYMax meet">
-            <image href="img/knight-cat.png" width="312" height="880"/>
+        <div class="scene-knight">
+          <img class="knight-human" src="img/knight.png" alt="">
+        </div>
+        <div class="cat-hearts cat-hearts-back">
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+          <span class="is-tiny"></span><span class="is-tiny"></span>
+          <span></span><span></span><span class="is-tiny"></span><span></span>
+          <span class="is-tiny"></span><span></span><span></span><span class="is-tiny"></span>
+        </div>
+        <div class="scene-figure">
+          <div class="beam"></div>
+          <div class="knights">
+            <svg class="knight knight-cat" viewBox="0 0 312 880" preserveAspectRatio="xMidYMax meet">
+              <image href="img/knight-cat.png" width="312" height="880"/>
+            </svg>
+          </div>
+        </div>
+        <div class="cat-hearts cat-hearts-front">
+          <span></span><span class="is-tiny"></span><span></span><span></span>
+          <span class="is-tiny"></span><span></span><span class="is-tiny"></span><span></span>
+          <span></span><span class="is-tiny"></span><span></span><span></span>
+          <svg class="scene-heart" viewBox="0 0 7 6" shape-rendering="crispEdges">
+            <rect x="1" y="0" width="2" height="1" fill="#e9d5ff"/>
+            <rect x="4" y="0" width="2" height="1" fill="#e9d5ff"/>
+            <rect x="0" y="1" width="7" height="2" fill="#c084fc"/>
+            <rect x="2" y="1" width="1" height="1" fill="#f5f3ff"/>
+            <rect x="1" y="3" width="5" height="1" fill="#a855f7"/>
+            <rect x="2" y="4" width="3" height="1" fill="#7c3aed"/>
+            <rect x="3" y="5" width="1" height="1" fill="#5b21b6"/>
+          </svg>
+          <svg class="scene-heart" viewBox="0 0 7 6" shape-rendering="crispEdges">
+            <rect x="1" y="0" width="2" height="1" fill="#ff6b8a"/>
+            <rect x="4" y="0" width="2" height="1" fill="#ff6b8a"/>
+            <rect x="0" y="1" width="7" height="2" fill="#ff4d6d"/>
+            <rect x="2" y="1" width="1" height="1" fill="#ffd0d8"/>
+            <rect x="1" y="3" width="5" height="1" fill="#e11d48"/>
+            <rect x="2" y="4" width="3" height="1" fill="#be123c"/>
+            <rect x="3" y="5" width="1" height="1" fill="#9f1239"/>
+          </svg>
+          <svg class="scene-heart" viewBox="0 0 7 6" shape-rendering="crispEdges">
+            <rect x="1" y="0" width="2" height="1" fill="#f5f0ff"/>
+            <rect x="4" y="0" width="2" height="1" fill="#f5f0ff"/>
+            <rect x="0" y="1" width="7" height="2" fill="#d8b4fe"/>
+            <rect x="2" y="1" width="1" height="1" fill="#fff"/>
+            <rect x="1" y="3" width="5" height="1" fill="#c084fc"/>
+            <rect x="2" y="4" width="3" height="1" fill="#a855f7"/>
+            <rect x="3" y="5" width="1" height="1" fill="#7c3aed"/>
+          </svg>
+          <svg class="scene-heart" viewBox="0 0 7 6" shape-rendering="crispEdges">
+            <rect x="1" y="0" width="2" height="1" fill="#e9d5ff"/>
+            <rect x="4" y="0" width="2" height="1" fill="#e9d5ff"/>
+            <rect x="0" y="1" width="7" height="2" fill="#9d6cff"/>
+            <rect x="2" y="1" width="1" height="1" fill="#f5f3ff"/>
+            <rect x="1" y="3" width="5" height="1" fill="#7a3dff"/>
+            <rect x="2" y="4" width="3" height="1" fill="#6d28d9"/>
+            <rect x="3" y="5" width="1" height="1" fill="#4c1d95"/>
           </svg>
         </div>
       </div>
 
+    </section>
+
+    <section class="auth-screen" id="auth-screen" hidden>
       <div class="auth-wrap">
         <p id="error" class="error" hidden></p>
-
         <div class="auth-card" id="signed-out">
           <div class="portrait" aria-hidden="true">
             <div class="heart-field">
@@ -94,6 +150,7 @@
               <button class="ghost" id="google" type="button">Google</button>
             </div>
             <button class="linkish" id="toggle-mode" type="button">Нет аккаунта? Создать</button>
+            <a class="linkish" id="back-home" href="#">На главную</a>
           </form>
         </div>
       </div>

@@ -11,9 +11,11 @@ import { setBoardUser } from "./board.js";
 
 const setupEl = document.querySelector("#setup");
 const appEl = document.querySelector("#app");
+const authScreenEl = document.querySelector("#auth-screen");
 const boardEl = document.querySelector("#board");
 const bottomEl = document.querySelector(".bottom");
 const userBar = document.querySelector("#user-bar");
+const backHomeBtn = document.querySelector("#back-home");
 const form = document.querySelector("#auth-form");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
@@ -115,38 +117,79 @@ function humanizeAuthError(error) {
   return map[code] || error.message || "Не получилось войти.";
 }
 
+function wantsLogin() {
+  return location.hash.replace(/^#/, "") === "login";
+}
+
+function clearHash() {
+  const url = new URL(location.href);
+  if (!url.hash) return;
+  history.replaceState({}, "", url.pathname + url.search);
+}
+
+function showLanding() {
+  if (appEl) appEl.hidden = false;
+  if (authScreenEl) authScreenEl.hidden = true;
+  if (boardEl) boardEl.hidden = true;
+  if (bottomEl) bottomEl.hidden = false;
+  if (userBar) userBar.hidden = true;
+  if (signedOutEl) signedOutEl.hidden = false;
+  document.body.classList.remove("in-app", "on-auth");
+  document.title = "Gifts";
+  setBoardUser(null);
+}
+
+function showAuth() {
+  if (appEl) appEl.hidden = true;
+  if (authScreenEl) authScreenEl.hidden = false;
+  if (boardEl) boardEl.hidden = true;
+  if (bottomEl) bottomEl.hidden = true;
+  if (userBar) userBar.hidden = true;
+  if (signedOutEl) signedOutEl.hidden = false;
+  document.body.classList.remove("in-app");
+  document.body.classList.add("on-auth");
+  document.title = "Gifts — вход";
+  setBoardUser(null);
+}
+
+function showBoard(user) {
+  if (appEl) appEl.hidden = true;
+  if (authScreenEl) authScreenEl.hidden = true;
+  if (boardEl) boardEl.hidden = false;
+  if (bottomEl) bottomEl.hidden = true;
+  if (userBar) userBar.hidden = false;
+  document.body.classList.add("in-app");
+  document.body.classList.remove("on-auth");
+  document.title = "Gifts — список";
+  setBoardUser(user);
+}
+
 function renderUser(user) {
   document.body.classList.add("auth-ready");
   const sharedUid = new URLSearchParams(location.search).get("uid")?.trim();
 
-  if (user || sharedUid) {
-    if (appEl) appEl.hidden = true;
-    if (boardEl) boardEl.hidden = false;
-    if (bottomEl) bottomEl.hidden = true;
-    if (userBar) userBar.hidden = false;
-    document.body.classList.add("in-app");
-    document.title = "Gifts — список";
-    setBoardUser(user);
+  if (user) {
+    clearHash();
+    showBoard(user);
+  } else if (wantsLogin()) {
+    showAuth();
+  } else if (sharedUid) {
+    showBoard(null);
   } else {
-    if (appEl) appEl.hidden = false;
-    if (boardEl) boardEl.hidden = true;
-    if (bottomEl) bottomEl.hidden = false;
-    if (userBar) userBar.hidden = true;
-    if (signedOutEl) signedOutEl.hidden = false;
-    document.body.classList.remove("in-app");
-    document.title = "Gifts — вход";
-    setBoardUser(null);
+    showLanding();
   }
 }
 
 if (!isFirebaseConfigured()) {
   setupEl.hidden = false;
   if (appEl) appEl.hidden = true;
+  if (authScreenEl) authScreenEl.hidden = true;
   if (boardEl) boardEl.hidden = true;
   if (userBar) userBar.hidden = true;
 } else {
   setupEl.hidden = true;
   if (appEl) appEl.hidden = true;
+  if (authScreenEl) authScreenEl.hidden = true;
   if (boardEl) boardEl.hidden = true;
   if (bottomEl) bottomEl.hidden = true;
   if (userBar) userBar.hidden = true;
@@ -154,6 +197,18 @@ if (!isFirebaseConfigured()) {
   onAuthStateChanged(auth, (user) => {
     renderUser(user);
   });
+
+  window.addEventListener("hashchange", () => {
+    renderUser(auth.currentUser);
+  });
+
+  if (backHomeBtn) {
+    backHomeBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      history.pushState({}, "", location.pathname);
+      renderUser(auth.currentUser);
+    });
+  }
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
